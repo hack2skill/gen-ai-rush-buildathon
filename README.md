@@ -40,7 +40,9 @@
   - SUPABASE_KEY
   - OPENAI_API_KEY
   - ELEVENLABS_API_KEY
-  
+
+- To start the application, run the below command
+  ```streamlit run app.py```
   
   
   
