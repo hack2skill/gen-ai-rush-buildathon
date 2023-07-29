@@ -9,15 +9,20 @@
 
 ## README.md must consist of the following information:
 
-#### Team Name -
-#### Problem Statement - 
-#### Team Leader Email -
+#### Team Name - TheBuilders 
+#### Problem Statement - 🚀 Learning effectively using Audio content!
+#### Team Leader Email - project.ice.0314@gmail.com
 
 ## A Brief of the Prototype:
   This section must include UML Diagrams and prototype description
   
 ## Tech Stack: 
    List Down all technologies used to Build the prototype
+   1. GPT-3 APIs by OpenAI for Text Generation
+   2. ElevenLabs API for Audio Generation
+   3. OpenAI Embeddings model
+   4. Supabase for Database
+   5. PGVector for Vector store.
    
 ## Step-by-Step Code Execution Instructions:
   This Section must contain a set of instructions required to clone and run the prototype so that it can be tested and deeply analyzed
