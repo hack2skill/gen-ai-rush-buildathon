@@ -25,7 +25,18 @@
    5. PGVector for Vector store.
    
 ## Step-by-Step Code Execution Instructions:
-  This Section must contain a set of instructions required to clone and run the prototype so that it can be tested and deeply analyzed
+  To run this application, follow the below instructions:
+
+- Clone the repository:
+
+- Navigate to the project directory:
+
+- Install the required dependencies:
+
+  ```pip install -r requirements.txt```
+
+- Create '''.env''' file
+  
   
 ## What I Learned:
    Write about the biggest learning you had while developing the prototype
