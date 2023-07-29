@@ -1,8 +1,9 @@
 import subprocess
 from last_command import get_last_command
 from llm import get_resolution
-from colorsme import pretty_print, print_error, print_normal
+from colorsme import pretty_print, print_error, print_normal, print_diff
 import re
+import difflib
 
 def extract_package_name(input_string):
     # Define the regular expression pattern to match "pip install X"
@@ -84,7 +85,7 @@ def exec(py_code):
         print_error(stderr)
         return False
     else:
-        print_normal("Successfully ran code")
+        print_normal("Successfully ran code. \nOutput:")
         pretty_print(stdout)
         return True
 
@@ -128,6 +129,12 @@ if __name__ == "__main__":
                 print_normal("Running code...")
                 # print_normal(py_code)
                 if exec(py_code):
+                    # Show difference between original code and code that was run using difflib
+                    original_code = get_program(last_command.split(' ')[1])
+                    print_normal("Difference between original code and code that was run:")
+                    for line in difflib.unified_diff(original_code.splitlines(), py_code.splitlines(), fromfile='original', tofile='run'):
+                        print_diff(line)
+
                     # Save the code to original file
                     # Ask user if they want to save the code to the original file
                     print_normal("Would you like to save the code to the original file?")
@@ -137,6 +144,9 @@ if __name__ == "__main__":
                         with open(last_command.split(' ')[1], "w") as f:
                             f.write(py_code)
                         pretty_print("Saved code to original file")
+                    else:
+                        pretty_print("Exiting...")
+                    
     else:
         pretty_print(output)
         pretty_print("No errors detected")

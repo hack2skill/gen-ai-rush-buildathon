@@ -37,6 +37,9 @@ def print_error(input_string):
 def print_normal(input_string):
     print(colored(input_string, "yellow"))
 
+def print_diff(input_string):
+    print(colored(input_string, "magenta"))
+
 if __name__ == "__main__":
     input_string = """
     The error message you received is a "ModuleNotFoundError" which means that the module named 'termcolor' could not be found.
