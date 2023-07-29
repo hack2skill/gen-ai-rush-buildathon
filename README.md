@@ -36,10 +36,10 @@
   ```pip install -r requirements.txt```
 
 - Create '''.env''' file and add the below variables
-  ```SUPABASE_URL = ```
-  ```SUPABASE_KEY = ```
-   ```OPENAI_API_KEY = ```
-  ```ELEVENLABS_API_KEY = ```
+  - SUPABASE_URL
+  - SUPABASE_KEY
+  - OPENAI_API_KEY
+  - ELEVENLABS_API_KEY
   
   
   
