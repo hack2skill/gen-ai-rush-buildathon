@@ -10,11 +10,11 @@
    - Click "New" and add the directory path of the autodebug folder (e.g., `C:\path\to\directory\containing\autodebug`).
 
 3. Installing the VS Code Extension:
-   a. Open Visual Studio Code.
-   b. Press `Ctrl+Shift+X` (or `Cmd+Shift+X` on macOS) to open the Extensions view.
-   c. Click on the three dots "..." menu on the top-right corner of the Extensions view and select "Install from VSIX...".
-   d. Browse to the location where the `.vsix` file is located and select it.
-   e. Visual Studio Code will then install the extension, and you can start using it.
+   - Open Visual Studio Code.
+   - Press `Ctrl+Shift+X` (or `Cmd+Shift+X` on macOS) to open the Extensions view.
+   - Click on the three dots "..." menu on the top-right corner of the Extensions view and select "Install from VSIX...".
+   - Browse to the location where the `.vsix` file is located and select it.
+   - Visual Studio Code will then install the extension, and you can start using it.
 
 ## Usage
 1. Run your Python program.
