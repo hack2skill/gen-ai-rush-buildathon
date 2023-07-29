@@ -18,6 +18,8 @@ def extract_package_name(input_string):
         # If there are no matches, return None
         return None
     
+def 
+    
 def get_output(last_command):
     # command = get_last_command()
     # print(command)
