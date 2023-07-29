@@ -1,0 +1,7 @@
+difflib
+json
+openai
+os
+re
+subprocess
+termcolor
