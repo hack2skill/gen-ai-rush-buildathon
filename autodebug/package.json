@@ -15,7 +15,7 @@
     "commands": [
       {
         "command": "extension.runCommand",
-        "title": "Run Command in Terminal"
+        "title": "AutoDebug my code"
       }
     ]
   },
