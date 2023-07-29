@@ -6,5 +6,5 @@ def get_wiki(query):
     return wikipedia.summary(query, sentences=2)
 
 if __name__ == "__main__":
-    print(get_wiki("python"))
+    print(get_wiki("Generative Artificial Inteligence"))
     
