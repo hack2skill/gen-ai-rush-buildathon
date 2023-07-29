@@ -18,7 +18,14 @@ def extract_package_name(input_string):
         # If there are no matches, return None
         return None
     
-def 
+def extract_python_code(input_string):
+    # Python code block starts with ```python and ends with ```
+    pattern = r'```python(.*)```'
+    matches = re.findall(pattern, input_string, re.DOTALL)
+    if matches:
+        return matches[0]
+    else:
+        return None
     
 def get_output(last_command):
     # command = get_last_command()
@@ -62,6 +69,26 @@ def install(pkg):
         print_normal("Successfully installed")
         pretty_print(pkg)
 
+def exec(py_code):
+    # save string to a file called temp.py
+    with open("temp.py", "w") as f:
+        f.write(py_code)
+    # run the file
+    process = subprocess.run(
+        f"python temp.py", stdout=subprocess.PIPE, stderr=subprocess.PIPE, shell=True
+    )
+    stdout = process.stdout.decode("ascii")
+    stderr = process.stderr.decode("ascii")
+    if process.returncode != 0:
+        print_error("Error running code")
+        print_error(stderr)
+        return False
+    else:
+        print_normal("Successfully ran code")
+        pretty_print(stdout)
+        return True
+
+
 
 if __name__ == "__main__":
     last_command, error_message, return_code = get_last_command()
@@ -92,7 +119,24 @@ if __name__ == "__main__":
             choice = input()
             if choice.lower() == "y":
                 install(pkg)
-
+        py_code = extract_python_code(res)
+        if py_code:
+            print_normal("Would you like to run the code?")
+            print_normal("Type y/N and press enter to continue")
+            choice = input()
+            if choice.lower() == "y":
+                print_normal("Running code...")
+                # print_normal(py_code)
+                if exec(py_code):
+                    # Save the code to original file
+                    # Ask user if they want to save the code to the original file
+                    print_normal("Would you like to save the code to the original file?")
+                    print_normal("Type y/N and press enter to continue")
+                    choice = input()
+                    if choice.lower() == "y":
+                        with open(last_command.split(' ')[1], "w") as f:
+                            f.write(py_code)
+                        pretty_print("Saved code to original file")
     else:
         pretty_print(output)
         pretty_print("No errors detected")
