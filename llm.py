@@ -2,7 +2,7 @@ import os
 import openai
 import json
 
-def get_resolution(tracemsg):
+def get_resolution(program,tracemsg):
   # Load the API key from the JSON file
   with open('config.json') as f:
       config = json.load(f)
@@ -18,7 +18,7 @@ def get_resolution(tracemsg):
       },
       {
         "role": "user",
-        "content": tracemsg
+        "content": "Error: "+tracemsg+" \n Context: \n"+program
       }
     ],
     temperature=0,
@@ -28,8 +28,9 @@ def get_resolution(tracemsg):
   # Process and print the API response
   if 'choices' in response and len(response['choices']) > 0:
       chat_result = response['choices'][0]['message']['content']
-      print("Chat Response:")
-      print(chat_result)
+    #   print("Resolution:")
+    #   print(chat_result)
+      return "Resolution: "+chat_result
   else:
-      print("No response or error occurred.")
+      return "No response or error occurred."
 

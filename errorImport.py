@@ -1,9 +1,10 @@
 import wikipedia
-def calculate_average(numbers):
-    total = sum(numbers)
-    average = total / len(numbers)
-    return average
 
-# Test case with logic error
-numbers_list = [10, 20, 30, 40, 50, '60']
-print(calculate_average(numbers_list))
+def get_wiki(query):
+    # wikipedia.set_lang("en")
+    # print(wikipedia.summary(query, sentences=2))
+    return wikipedia.summary(query, sentences=2)
+
+if __name__ == "__main__":
+    print(get_wiki("python"))
+    
