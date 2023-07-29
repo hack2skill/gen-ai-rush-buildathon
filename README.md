@@ -1,26 +1,23 @@
-# Gen-Ai-Rush-Buildathon
+# AutoDebug
 
-## Submission Instruction:
-  1. Fork this repository
-  2. Create a folder with your Team Name
-  3. Upload all the code and necessary files in the created folder
-  4. Upload a **README.md** file in your folder with the below mentioned informations.
-  5. Generate a Pull Request with your Team Name. (Example: submission-XYZ_team)
+## Installation
+1. Add your OpenAI keys to `config.json`.
 
-## README.md must consist of the following information:
+2. Add the current folder to the PATH variable:
+   - Open the Start menu and search for "Environment Variables," then select "Edit the system environment variables."
+   - Click the "Environment Variables" button.
+   - In the System Variables section, find the "Path" variable and click "Edit."
+   - Click "New" and add the directory path of the autodebug folder (e.g., `C:\path\to\directory\containing\autodebug`).
 
-#### Team Name -
-#### Problem Statement - 
-#### Team Leader Email -
+3. Installing the VS Code Extension:
+   a. Open Visual Studio Code.
+   b. Press `Ctrl+Shift+X` (or `Cmd+Shift+X` on macOS) to open the Extensions view.
+   c. Click on the three dots "..." menu on the top-right corner of the Extensions view and select "Install from VSIX...".
+   d. Browse to the location where the `.vsix` file is located and select it.
+   e. Visual Studio Code will then install the extension, and you can start using it.
 
-## A Brief of the Prototype:
-  This section must include UML Diagrams and prototype description
-  
-## Tech Stack: 
-   List Down all technologies used to Build the prototype
-   
-## Step-by-Step Code Execution Instructions:
-  This Section must contain a set of instructions required to clone and run the prototype so that it can be tested and deeply analyzed
-  
-## What I Learned:
-   Write about the biggest learning you had while developing the prototype
+## Usage
+1. Run your Python program.
+2. When you encounter an error:
+   - Press `Ctrl+Shift+P` and type "AutoDebug: start in VS Code."
+   - OR type `autodebug` in the terminal.
