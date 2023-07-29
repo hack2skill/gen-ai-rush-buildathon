@@ -27,11 +27,11 @@
 ## Step-by-Step Code Execution Instructions:
   To run this application, follow the below instructions:
 
-- Clone the repository:
+- Clone the repository
 
-- Navigate to the project directory:
+- Navigate to the project directory
 
-- Install the required dependencies:
+- Install the required dependencies
 
   ```pip install -r requirements.txt```
 
@@ -47,4 +47,4 @@
   
   
 ## What I Learned:
-   Write about the biggest learning you had while developing the prototype
+   One of the major learning is that I have developed a few AI apps before, but this was the first time I did a complete vector database integration. 
