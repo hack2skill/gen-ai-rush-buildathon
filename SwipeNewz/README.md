@@ -1,20 +1,28 @@
-# SwipeNewz
+#### Team Name - SwipeNewz
+#### Problem Statement - 53% of US population relies on social media for news consumption, but they encounter irrelevant content due to non-news distractions and lack of personalization. Current news aggregator apps fail to utilize the most consumable format, such as reels.
+#### Team Leader Email - hiteshgautam026@gmail.com /  harry.gautam980@gmail.com
 
-A new Flutter project.
+## A Brief of the Prototype:
 
-## Getting Started
+  Code Architecture 
+  ![WhatsApp Image 2023-07-30 at 05 31 34](https://github.com/HiteshG/gen-ai-rush-buildathon/assets/28000328/94ecd4a3-f655-4c77-a307-9ad55a8aaad0)
+  
+## Tech Stack: 
+   AWS Lambda
+   Fluttter
+   Dart
+   Python
+   OpenAI ( GenAI )
+   Stable Diffusion ( GenAI )
+   S3
+   Firebase
+   HourOne ( GenAI )
+    
+   
+## Step-by-Step Code Execution Instructions:
+  Go to backend folder --> Add keys ( OpenAI, StableDiffusion ) --> Run this python.py 
 
-FlutterFlow projects are built to run on the Flutter _stable_ release.
-
-### Getting started continued:
-
-This project is a starting point for a Flutter application.
-
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://flutter.dev/docs/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://flutter.dev/docs/cookbook)
-
-For help getting started with Flutter, view our
-[online documentation](https://flutter.dev/docs), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+  Find our app android APK hosted - 
+  
+## What I Learned:
+   Making business product with vision statement which can be scaled and have real-life utility
