@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>VizAI</title>
+    <!DOCTYPE html>
+    <html>
+    <head>
+        <title>VizAI</title>
+        <style>
+           body {
+        height: 100vh;
+        margin: auto;
+        font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+        overflow: auto;
+        background: linear-gradient(315deg, rgba(101, 0, 94, 0.623) 3%, rgba(60, 133, 206, 0.562) 38%, rgba(48, 238, 225, 0.726) 68%, rgba(255, 240, 240, 0.966) 98%);
+        animation: gradient 15s ease infinite;
+        background-size: 400% 400%;
+        background-attachment: fixed;
+    }
+    
+    @keyframes gradient {
+        0% {
+            background-position: 0% 0%;
+        }
+    
+        50% {
+            background-position: 100% 100%;
+        }
+    
+        100% {
+            background-position: 0% 0%;
+        }
+    }
+    
+    .wave {
+        background: rgba(255, 255, 255, 0.616);
+        border-radius: 1000% 1000% 0 0;
+        position: fixed;
+        width: 200%;
+        height: 12em;
+        animation: wave 10s -3s linear infinite;
+        transform: translate3d(0, 0, 0);
+        opacity: 0.8;
+        bottom: 0;
+        left: 0;
+        z-index: -1;
+    }
+    
+    .wave:nth-of-type(2) {
+        bottom: -1.25em;
+        animation: wave 18s linear reverse infinite;
+        opacity: 0.8;
+    }
+    
+    .wave:nth-of-type(3) {
+        bottom: -2.5em;
+        animation: wave 20s -1s reverse infinite;
+        opacity: 0.9;
+    }
+    
+    @keyframes wave {
+        2% {
+            transform: translateX(1);
+        }
+    
+        25% {
+            transform: translateX(-25%);
+        }
+    
+        50% {
+            transform: translateX(-50%);
+        }
+    
+        75% {
+            transform: translateX(-25%);
+        }
+    
+        100% {
+            transform: translateX(1);
+        }
+    }
+    
+    #navigation {
+        margin: 10px;
+        border-radius: 9px;
+        background-color: rgba(235, 235, 235, 0.699);
+        box-shadow: inset 6px 6px 10px 0 rgba(49, 48, 48, 0.5), inset -6px -6px 10px 0 rgba(255, 255, 255, 0.829);
+    }
+    
+    #dropdown {
+        margin: 3%;
+        border-radius: 9px;
+        background-color: rgba(235, 235, 235, 0.699);
+        box-shadow: inset -6px -6px 10px 0 rgba(49, 48, 48, 0.5), inset 6px 6px 10px 0 rgba(255, 255, 255, 0.829);
+    }
+    
+    .navbar-item:hover,
+    .navbar-link:hover {
+        color: rgb(17, 102, 230);
+        border: 1px 1px 5px black;
+        box-shadow: 1px 1px 5px rgba(9, 28, 58, 0.452);
+        border-radius: 9px;
+    }
+    
+    .navbar-item {
+        margin: 2%;
+    }
+    
+    .navbar-link {
+        border-radius: 9px;
+    }
+    
+    #logo:hover {
+        color: rgba(17, 102, 230, 0);
+        border: 1px 1px 5px rgba(0, 0, 0, 0);
+        box-shadow: 1px 1px 5px rgba(0, 0, 0, 0);
+    }
+    
+    #sign-up:hover {
+        box-shadow: inset -6px -6px 10px 0 rgba(49, 48, 48, 0.5), inset 6px 6px 10px 0 rgba(255, 255, 255, 0.829);
+    }
+    
+    #sign:hover {
+        color: rgba(17, 102, 230, 0);
+        border: 1px 1px 5px rgba(0, 0, 0, 0);
+        box-shadow: 1px 1px 5px rgba(0, 0, 0, 0);
+    }
+    
+    #h1 {
+        text-align: center;
+        font-size: 20vw;
+        font-weight: bold;
+        background: linear-gradient(315deg, rgb(255, 0, 238) 3%, rgb(60, 133, 206) 38%, rgb(48, 238, 225) 68%, rgb(255, 240, 240) 98%);
+        animation: gradient 15s ease infinite;
+        background-size: 200% 200%;
+        background-attachment: fixed;
+        background-clip: text;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    }
+    
+    #h2 {
+        text-align: center;
+        font-size: 4vw;
+        font-weight: bold;
+        background: linear-gradient(315deg, rgb(255, 0, 238) 3%, rgb(60, 133, 206) 38%, rgb(48, 238, 225) 68%, rgb(255, 240, 240) 98%);
+        animation: gradient 15s ease infinite;
+        background-size: 100% 100%;
+        background-attachment: fixed;
+        background-clip: text;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    }
+    
+    p {
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        text-align: center;
+        font-size: 0.8vw;
+    }
+    
+    #floating-layer {
+        text-align: center;
+        width: 80%; /* Adjust the width as desired */
+        max-width: 800px; /* Optional: Set a maximum width for responsiveness */
+        margin: 0 auto; /* Center the element horizontally */
+        padding: 30px; /* Optional: Add some padding to the content */
+        background-color: rgba(255, 255, 255, 0.8); /* Optional: Add a semi-transparent background */
+        border-radius: 15px; /* Optional: Add rounded corners */
+    }
+    .button {
+        border: 2px solid transparent;
+        background-color: transparent;
+        color: #ffffff;
+        font-size: 16px;
+        cursor: pointer;
+    }
+        </style>
+
+    
+
+
+<head>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+    <nav class="navbar" role="navigation" id="navigation" aria-label="main navigation">
+        <div class="navbar-brand">
+            <a class="navbar-item" id="logo">
+                <img src="https://i.ibb.co/fFZQgyc/logo.png" style="max-height: fit-content !important;" alt="logo" border="0" width="100" height="100">
+            </a>
+            
+            <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false"
+                data-target="navbarBasicExample">
+                <span aria-hidden="true"></span>
+                <span aria-hidden="true"></span>
+                <span aria-hidden="true"></span>
+            </a>
+        </div>
+
+        <div id="navbarBasicExample" class="navbar-menu">
+            <div class="navbar-start">
+                <a class="navbar-item" href="/text_to_3d">
+                    Text to Image
+                </a>
+
+                <a class="navbar-item" href="/text_to_33d">
+                    Text to 3D object
+                </a>
+                <a class="navbar-item" href="/ar_view">
+                    ar_view
+                </a>
+
+                <a class="navbar-item" href="/home">
+                    About Us
+                </a>
+
+
+                </div>
+            </div>
+
+            <div class="navbar-end">
+                <div id="sign" class="navbar-item">
+                    <div class="buttons">
+                        <a href="/" id="sign-up" class="button is-light">
+                            Logout
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+</head>
+
+<body>
+    <div>
+        <div class="wave"></div>
+        <div class="wave"></div>
+        <div class="wave"></div>
+    </div>
+   
+   
+    <div id="floating-layer">
+        <h3><strong>Welcome to 3D-VizAI - Your Gateway to 3D Text Magic!</strong></h3>
+        <p>Discover a whole new dimension of visual storytelling with vizAI! Our cutting-edge plugin turns your
+            ordinary text into mesmerizing 3D images that pop off the screen. Engage your audience like never before, as your words come alive and
+            ignite their imagination.</p>
+    </div>
+    
+</body>
+<link rel="stylesheet" type="text/css" href="pw.css">
+<script src="https://kit.fontawesome.com/e690f7b4b8.js" crossorigin="anonymous"></script>
+<script type="module" src="pw.js"></script>
+</html>
