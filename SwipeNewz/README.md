@@ -1,6 +1,10 @@
 #### Team Name - SwipeNewz
-#### Problem Statement - 53% of US population relies on social media for news consumption, but they encounter irrelevant content due to non-news distractions and lack of personalization. Current news aggregator apps fail to utilize the most consumable format, such as reels.
-#### Team Leader Email - hiteshgautam026@gmail.com /  harry.gautam980@gmail.com
+
+#### Problem Statement - 
+53% of US population relies on social media for news consumption, but they encounter irrelevant content due to non-news distractions and lack of personalization. Current news aggregator apps fail to utilize the most consumable format, such as reels.
+
+#### Team Leader Email - 
+hiteshgautam026@gmail.com /  harry.gautam980@gmail.com
 
 ## A Brief of the Prototype:
 
