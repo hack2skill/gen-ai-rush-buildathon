@@ -37,7 +37,6 @@
 ● Next.js
 ● Tailwind CSS
 ● Flask
-● MongoDB
 ● TensorFlow
 ● Keras
 ● Python
