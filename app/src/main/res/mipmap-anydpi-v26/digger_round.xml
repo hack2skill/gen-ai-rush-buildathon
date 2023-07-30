@@ -1,0 +1,4 @@
+<adaptive-icon xmlns:ns0="http://schemas.android.com/apk/res/android">
+    <background ns0:drawable="@drawable/digger_background" />
+    <foreground ns0:drawable="@mipmap/digger_foreground" />
+</adaptive-icon>

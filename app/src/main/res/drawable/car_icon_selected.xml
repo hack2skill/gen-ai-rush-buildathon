@@ -1,0 +1,11 @@
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:drawable="@drawable/car_icon" android:gravity="center" />
+    <item android:gravity="center">
+        <shape android:shape="oval">
+            <stroke
+                android:width="5dp"
+                android:color="@color/yellow" />
+            <size android:height="80dp" android:width="80dp"></size>
+        </shape>
+    </item>
+</layer-list>

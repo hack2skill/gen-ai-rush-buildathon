@@ -1,0 +1,4 @@
+<adaptive-icon xmlns:ns0="http://schemas.android.com/apk/res/android">
+    <background ns0:drawable="@drawable/interesticonbackground_background" />
+    <foreground ns0:drawable="@mipmap/interesticonbackground_foreground" />
+</adaptive-icon>

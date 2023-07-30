@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:drawable="@mipmap/interesticonbackground_foreground"
+        android:gravity="center" />
+    <item
+        android:drawable="@mipmap/digger_foreground"
+        android:gravity="center">
+    </item>
+</layer-list>

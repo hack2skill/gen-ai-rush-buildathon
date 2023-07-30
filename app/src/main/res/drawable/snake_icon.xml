@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:drawable="@mipmap/interesticonbackground_foreground"
+        android:gravity="center" />
+    <item
+        android:drawable="@mipmap/snake_foreground"
+        android:gravity="center">
+        <bitmap
+            android:src="@mipmap/snake_foreground"
+            android:gravity="center"
+            android:scaleType="centerInside" />
+    </item>
+</layer-list>
