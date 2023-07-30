@@ -18,7 +18,7 @@
   2. Responsible Decentralised Intelligence:
 
   GenFusion embraces the power of Federated Learning, enabling multiple entities (Internal/External) to collaborate on model training without exposing their data. It facilitates secure aggregation of model updates, ensuring that the individual data privacy is maintained during collaboration.
-  ![Alt text](image-1.png)
+  ![Alt text](image.png)
 
   3. Real-time Compliance & Documentation:
   GenFusion's compliance module auto-generates documentation that details the privacy controls implemented, the testing conducted, and the protection measures taken to prevent data leaks. This fulfils regulatory requirements and helps businesses remain compliant with global privacy regulations like GDPR.
