@@ -1,568 +1,228 @@
-package com.musicaigeneration.storybot
+package com.example.buildathonstoryv0
 
-import android.content.Intent
+import android.graphics.BitmapFactory
 import android.os.Bundle
 import android.speech.tts.TextToSpeech
-import android.transition.TransitionManager
+import android.text.SpannableStringBuilder
+import android.text.Spanned
+import android.text.style.ImageSpan
+import android.util.Base64
 import android.util.Log
-import android.view.KeyEvent
-import android.view.View
-import android.view.ViewGroup
-import android.view.ViewTreeObserver
 import android.widget.Button
+import android.widget.CheckBox
 import android.widget.EditText
 import android.widget.ImageButton
-import android.widget.ImageView
-import android.widget.LinearLayout
-import android.widget.ScrollView
 import android.widget.TextView
 import android.widget.ToggleButton
 import androidx.activity.ComponentActivity
-import androidx.appcompat.app.AppCompatActivity
-import androidx.appcompat.app.AppCompatDelegate
+import androidx.activity.compose.setContent
+import androidx.compose.foundation.layout.fillMaxSize
+import androidx.compose.material3.MaterialTheme
+import androidx.compose.material3.Surface
+import androidx.compose.material3.Text
+import androidx.compose.runtime.Composable
+import androidx.compose.ui.Modifier
+import androidx.compose.ui.tooling.preview.Preview
 import com.android.volley.Request
 import com.android.volley.Response
 import com.android.volley.RetryPolicy
 import com.android.volley.VolleyError
-import com.android.volley.toolbox.JsonObjectRequest
 import com.android.volley.toolbox.StringRequest
 import com.android.volley.toolbox.Volley
-import com.bumptech.glide.Glide
-import com.bumptech.glide.annotation.GlideModule
-import com.bumptech.glide.module.AppGlideModule
-import com.google.android.gms.auth.api.signin.GoogleSignIn
-import com.google.android.gms.auth.api.signin.GoogleSignInAccount
-import com.google.android.gms.auth.api.signin.GoogleSignInClient
-import com.google.android.gms.auth.api.signin.GoogleSignInOptions
-import com.google.android.gms.common.SignInButton
-import com.google.android.gms.common.api.ApiException
-import com.google.android.gms.tasks.Task
+import com.example.buildathonstoryv0.ui.theme.BuildathonStoryV0Theme
 import okhttp3.HttpUrl
-import org.json.JSONArray
 import org.json.JSONObject
 import java.util.Locale
 
-
-@GlideModule
-class MyAppGlideModule : AppGlideModule()
-
-class SignInActivity : AppCompatActivity() {
-
-    private lateinit var mGoogleSignInClient: GoogleSignInClient
-    private val RC_SIGN_IN = 9001
-
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_sign_in)
-
-        // Configure sign-in to request the user's ID, email address, and basic profile.
-        // ID and basic profile are included in DEFAULT_SIGN_IN.
-        val gso = GoogleSignInOptions.Builder(GoogleSignInOptions.DEFAULT_SIGN_IN)
-            .requestEmail()
-            .build()
-
-        // Build a GoogleSignInClient with the options specified by gso.
-        mGoogleSignInClient = GoogleSignIn.getClient(this, gso)
-
-        val signInButton = findViewById<SignInButton>(R.id.sign_in_button)
-        signInButton.setOnClickListener {
-            signIn()
-        }
-
-    }
-
-    fun onClick(v: View) {
-        when (v.id) {
-            R.id.sign_in_button -> signIn()
-        }
-    }
-
-    private fun signIn() {
-        val signInIntent = mGoogleSignInClient.signInIntent
-        startActivityForResult(signInIntent, RC_SIGN_IN)
-    }
-    public override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
-        super.onActivityResult(requestCode, resultCode, data)
-
-        // Result returned from launching the Intent from GoogleSignInClient.getSignInIntent(...);
-        if (requestCode == RC_SIGN_IN) {
-            val task = GoogleSignIn.getSignedInAccountFromIntent(data)
-            handleSignInResult(task)
-        }
-    }
-
-    private fun handleSignInResult(completedTask: Task<GoogleSignInAccount>) {
-        try {
-            val account: GoogleSignInAccount = completedTask.getResult(ApiException::class.java)
-            Log.d("handleSignInResult:","just before the start Activity function")
-
-            // Signed in successfully, show authenticated UI.
-            startActivity(Intent(this, MainActivity::class.java))
-            finish()
-        } catch (e: ApiException) {
-            // The ApiException status code indicates the detailed failure reason.
-            // Please refer to the GoogleSignInStatusCodes class reference for more information.
-            Log.w("failed login", "signInResult:failed code=" + e.statusCode)
-        }
-    }
-}
-
-
 class MainActivity : ComponentActivity() {
-    lateinit var initialText1:TextView
-    lateinit var initialText2:TextView
-    lateinit var nameInput:EditText
-    lateinit var sendBtn:Button;
-    lateinit var resultTv:TextView;
-    lateinit var intBtn:EditText;
-    lateinit var interestsInput:EditText
-    lateinit var addInterestButton:Button
-    lateinit var currentInterestsList:TextView
-    lateinit var clearInterestsButton:Button
-    lateinit var diggerButton:ToggleButton
-    lateinit var lionButton:ToggleButton
-    lateinit var magicButton:ToggleButton
-    lateinit var planetButton:ToggleButton
-    lateinit var monkeyButton:ToggleButton
-    lateinit var jeepButton:ToggleButton
-
-    lateinit var clear_interests_button:Button
-    lateinit var storyImage:ImageView
-    lateinit var audioButton:ImageButton
-    private val inputLayout by lazy { findViewById<View>(R.id.inputLayout) }
-    private val outputLayout by lazy { findViewById<View>(R.id.outputLayout) }
-    private val scrollView by lazy { findViewById<ScrollView>(R.id.scrollViewInputLayout) }
-    private val insideScrollViewInputLayout by lazy {findViewById<LinearLayout>(R.id.insideScrollViewInputLayout)}
-
-    var isInputLayoutMinimized = false
-    var isOutputLayoutMinimized = true
-
-    lateinit var tts:TextToSpeech
-    val interests = mutableListOf<String>()
-    lateinit var rootView:View
+    private lateinit var pawpatrolbutton: ToggleButton
+    private lateinit var carbutton: ToggleButton
+    private lateinit var pikachubutton: ToggleButton
+    private lateinit var lionbutton: ToggleButton
+    private lateinit var peppapigbutton: ToggleButton
+    private lateinit var sciencebutton: ToggleButton
+    private lateinit var otherInterestsEditText: EditText
+    private lateinit var childNameEditText: EditText
+    private lateinit var submitButton: Button
+    private lateinit var addImagesCheckBox: CheckBox
+    private lateinit var resultTextView: TextView
+    private lateinit var playAudioButton: ImageButton
+    lateinit var tts: TextToSpeech
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_YES);
         setContentView(R.layout.activity_main)
-        rootView = findViewById(android.R.id.content)
 
-        val viewTreeObserver = inputLayout.viewTreeObserver
-        viewTreeObserver.addOnGlobalLayoutListener(object : ViewTreeObserver.OnGlobalLayoutListener {
-            override fun onGlobalLayout() {
-                inputLayout.viewTreeObserver.removeOnGlobalLayoutListener(this)
-                val inputLayoutHeight = inputLayout.height
-                Log.d("inputLayout height set to: ", "" + inputLayoutHeight)
-                // Set the initial height of the top part to 50% of the screen.
-                inputLayout.layoutParams.height = (resources.displayMetrics.heightPixels * 0.50).toInt()
-
-            }
-        })
-
-        val viewTreeObserver2 = outputLayout.viewTreeObserver
-        viewTreeObserver2.addOnGlobalLayoutListener(object : ViewTreeObserver.OnGlobalLayoutListener {
-            override fun onGlobalLayout() {
-                outputLayout.viewTreeObserver.removeOnGlobalLayoutListener(this)
-                val outputLayoutHeight = outputLayout.height
-                Log.d("outputLayout height set to: ", "" + outputLayoutHeight)
-            }
-        })
-
-
-//        inputLayout = findViewById(R.id.inputLayout)
-//        outputLayout = findViewById(R.id.outputLayout)
-
-        initialText1 = findViewById(R.id.initialText1)
-        initialText2 = findViewById(R.id.initialText2)
-        nameInput = findViewById(R.id.name_input)
-        interestsInput = findViewById(R.id.interests_input)
-        //clear_interests_button = findViewById(R.id.clear_interests_button)
-        currentInterestsList = findViewById(R.id.currentInterests)
-        clearInterestsButton = findViewById(R.id.clearInterestsButton)
-        diggerButton = findViewById(R.id.diggerButton)
-        lionButton = findViewById(R.id.lionButton)
-        magicButton = findViewById(R.id.magicButton)
-        planetButton = findViewById(R.id.planetButton)
-        monkeyButton = findViewById(R.id.monkeyButton)
-        jeepButton = findViewById(R.id.jeepButton)
-
-        sendBtn = findViewById(R.id.submit_button)
-        resultTv = findViewById(R.id.ResultText)
-        audioButton = findViewById(R.id.audioButton)
-        var audioToggle = 0
-        inputLayout.setClickable(true)
-        scrollView.setClickable(true)
+        pawpatrolbutton = findViewById(R.id.pawpatrolbutton)
+        carbutton = findViewById(R.id.carbutton)
+        pikachubutton = findViewById(R.id.pikachubutton)
+        lionbutton = findViewById(R.id.lionbutton)
+        peppapigbutton = findViewById(R.id.peppapigbutton)
+        sciencebutton = findViewById(R.id.sciencebutton)
+        otherInterestsEditText = findViewById(R.id.other_interests_edittext)
+        childNameEditText = findViewById(R.id.child_name_edittext)
+        submitButton = findViewById(R.id.submit_button)
+        addImagesCheckBox = findViewById(R.id.add_images_checkbox)
+        playAudioButton = findViewById(R.id.play_audio)
+        resultTextView = findViewById(R.id.resultTv)
 
         tts = TextToSpeech(applicationContext, TextToSpeech.OnInitListener {
             if(it == TextToSpeech.SUCCESS){
-                //Log.d("Languages: ", tts.availableLanguages.toString())
+                Log.d("TTS: ", "Initialization successful")
                 tts.language = Locale("en", "IN")
-
             }
             else{
                 Log.e("TTS", "Initialization failed with error code: $it")
             }
         })
 
-        val interestButtons = arrayOf(
-        diggerButton,
-        lionButton,
-        magicButton,
-        planetButton,
-        monkeyButton,
-        jeepButton,
-        )
+        submitButton.setOnClickListener {
+            val otherInterests = otherInterestsEditText.text.toString()
+            val childName = childNameEditText.text.toString()
+            performAction(childName, otherInterests)
+        }
 
-        interestsInput.setOnKeyListener { v, keyCode, event ->
-            if (keyCode == KeyEvent.KEYCODE_ENTER && event.action == KeyEvent.ACTION_UP) {
-                // Perform action on key press
-                val interestsInputText = interestsInput.text.toString().replace(Regex("[^A-Za-z0-9 ,']|\n"), "")
-                if (interestsInputText.isNotEmpty()) {
-                    if (interests.contains(interestsInputText)) {}
-                    else {
-                        interests.add(interestsInputText)
-                    }
-                }
-                // Convert the interests list to a comma separated string
-                val interestsString = interests.joinToString(", ")
-
-                currentInterestsList.text =  interestsString
-                interestsInput.setText("")
-                true
+        playAudioButton.setOnClickListener {
+            val storyText = resultTextView.text.toString()
+            if (tts.isSpeaking) {
+                // Stop the TTS engine if it is currently speaking
+                tts.stop()
+            } else if (storyText.isNotEmpty()) {
+                Log.d("TTS: ", "storyText is NOT empty")
+                tts.speak(storyText, TextToSpeech.QUEUE_FLUSH, null, null)
+                Log.d("TTS", "TTS has started")
+                Log.d("Contents of StoryText", "storyText: $storyText")
             } else {
-                false
-            }
-        }
-
-        clearInterestsButton.setOnClickListener {
-            interestsInput.setText("")
-            currentInterestsList.setText("")
-            for (button in interestButtons) {
-                if (button.isChecked) {
-                    button.isChecked = false
-                }
-            }
-            interests.clear()
-               }
-
-        fun onInputMinimizedPartClick() {
-            // Animate the top part to become big again
-            val transition = TransitionManager.beginDelayedTransition(rootView as ViewGroup?)
-            val layoutParams = inputLayout.layoutParams as LinearLayout.LayoutParams
-            layoutParams.height = 0
-            layoutParams.weight = 3f
-            inputLayout.layoutParams = layoutParams
-
-            val outputLayoutParams = outputLayout.layoutParams as LinearLayout.LayoutParams
-            outputLayoutParams.height = 0
-            outputLayoutParams.weight = 1f
-            outputLayout.layoutParams = outputLayoutParams
-            showComponents()
-            isInputLayoutMinimized = false
-            isOutputLayoutMinimized = true
-
-            Log.d("inputLayout height set to: ", "" + inputLayout.height)
-            Log.d("outputLayout height set to: ", "" + outputLayout.height)
-        }
-
-        fun onOutputMinimizedPartClick() {
-            // Animate the top part to become small
-            val transition = TransitionManager.beginDelayedTransition(rootView as ViewGroup?)
-            val layoutParams = inputLayout.layoutParams as LinearLayout.LayoutParams
-            layoutParams.height = 0
-            layoutParams.weight = 0.5f
-            inputLayout.layoutParams = layoutParams
-
-            val outputLayoutParams = outputLayout.layoutParams as LinearLayout.LayoutParams
-            outputLayoutParams.height = 0
-            outputLayoutParams.weight = 3.5f
-            outputLayout.layoutParams = outputLayoutParams
-
-            Log.d("inputLayout height set to: ", "" + inputLayout.height)
-            Log.d("outputLayout height set to: ", "" + outputLayout.height)
-            hideComponents()
-            scrollView.post {
-                scrollView.fullScroll(View.FOCUS_DOWN)
-            }
-            isInputLayoutMinimized = true
-            isOutputLayoutMinimized = false
-            Log.d("isInputLayoutMinimized after story clicked", isInputLayoutMinimized.toString())
-        }
-
-        Log.d("Setting OnClickListener", "Setting OnClickListener for inputLayout")
-        inputLayout.setOnClickListener {
-            Log.d("isInputLayoutMinimized when inputLayout is clicked", isInputLayoutMinimized.toString())
-            if (isInputLayoutMinimized) {
-                onInputMinimizedPartClick()
-            }
-        }
-
-        Log.d("Setting OnClickListener for Output", "Setting OnClickListener for outputLayout")
-        outputLayout.setOnClickListener {
-            Log.d("isoutputLayoutMinimized when outputLayout is clicked", isOutputLayoutMinimized.toString())
-            if (isOutputLayoutMinimized) {
-                onOutputMinimizedPartClick()
-            }
-        }
-
-        resultTv.setOnClickListener{
-            outputLayout.performClick()
-        }
-
-        scrollView.setOnClickListener {
-            inputLayout.performClick()
-        }
-
-        insideScrollViewInputLayout.setOnClickListener{
-            Log.d("InsideViewScroll: ", "inside view scroll layout")
-            inputLayout.performClick()
-        }
-
-        sendBtn.setOnClickListener {
-            // Animate the top part to become small
-            val transition = TransitionManager.beginDelayedTransition(rootView as ViewGroup?)
-            val layoutParams = inputLayout.layoutParams as LinearLayout.LayoutParams
-            layoutParams.height = 0
-            layoutParams.weight = 0.5f
-            inputLayout.layoutParams = layoutParams
-
-            val outputLayoutParams = outputLayout.layoutParams as LinearLayout.LayoutParams
-            outputLayoutParams.height = 0
-            outputLayoutParams.weight = 3.5f
-            outputLayout.layoutParams = outputLayoutParams
-
-            Log.d("inputLayout height set to: ", "" + inputLayout.height)
-            Log.d("outputLayout height set to: ", "" + outputLayout.height)
-            hideComponents()
-            scrollView.post {
-                scrollView.fullScroll(View.FOCUS_DOWN)
-            }
-            isInputLayoutMinimized = true
-            Log.d("isInputLayoutMinimized after story clicked", isInputLayoutMinimized.toString())
-
-            //   interests.clear()
-            // Add the interests from the interestsInput field
-                val interestsInputText = interestsInput.text.toString().replace(Regex("[^A-Za-z0-9 ,']|\n"), "")
-                if (interestsInputText.isNotEmpty()) {
-                    if (interests.contains(interestsInputText)) {}
-                    else {
-                        interests.add(interestsInputText)
-                    }
-                }
-
-                // Add the interests from the checkboxes
-                for (i in 0 until interestButtons.size) {
-                    val checkbox = interestButtons[i]
-                    if (checkbox.isChecked) {
-                        var buttonName = checkbox.resources.getResourceEntryName(checkbox.id)
-                        buttonName = buttonName.replace("Button", "")
-
-                        //val checkboxText = checkbox.text.toString()
-                        if (interests.contains(buttonName)) {}
-                        else {
-                            interests.add(buttonName)
-                        }
-                    }
-                }
-
-                // Convert the interests list to a comma separated string
-                val interestsString = interests.joinToString(", ")
-                // Log the interestsString variable
-                Log.d("MyApp", "Interests: $interestsString")
-                var duration = "long"
-                //if (ThreeminutesCheckbox.isChecked){
-            //    duration = "short"
-            //}
-            //  if (FiveminutesCheckbox.isChecked){
-            //      duration = "medium"
-            //  }
-            //  if (TenminutesCheckbox.isChecked){
-            //      duration = "long"
-            //  }
-
-                performAction( nameInput.text.toString(), interestsString, duration)
-                //val imagePrompt = "Please make an image that can serve as a cover for a story starring a a 3 year old and $interestsString."
-                //generateImages(imagePrompt)
-
-            Log.d("exiting SubmitClick", "Exiting submit button click")
-        }
-
-        audioButton.setOnClickListener {
-            val storyText = resultTv.text.toString()
-            if (storyText.isNotEmpty()) {
-                val isSpeaking = tts.isSpeaking
-                if (isSpeaking)
-                {
-                    tts.stop()
-                }
-                else
-                {
-                    val chunks = storyText.chunked(4000) // split the text into smaller chunks
-                    for (chunk in chunks) {
-                        tts.speak(
-                            chunk,
-                            TextToSpeech.QUEUE_ADD,
-                            null,
-                            null
-                        ) // add each chunk to the TTS queue
-                    }
-                }
-
-            }
-            else {
+                Log.d("TTS", "storyText is empty")
                 tts.speak("There is no story generated yet. Please generate a story first", TextToSpeech.QUEUE_FLUSH, null, null)
             }
-
         }
-
-
     }
 
-    fun performAction(nameInput:String, input:String, duration:String){
-        resultTv.text = "Generating Story..."
-        // Instantiate the RequestQueue.
-        val queue = Volley.newRequestQueue(this)
-        val url = "https://gpt-trials-py-run-mja7vtntja-uc.a.run.app/"
-        //Log.d("input", input)
-        val jsonObject = JSONObject()
-        var prompt:String
-        if (nameInput.isEmpty())
-        {
-            prompt = "Make a story appropriate to a 3 year old. The story should also involve $input.The story should have many dialogs and an implicit moral. The story should be engaging for a 3 year old child.  The story should approximately have 500 words"
-        }
-        else
-        {
-            prompt = "Make a story appropriate to a 3 year old. The story should star a 3 year old names $nameInput and also involve $input.The story should have many dialogs and an implicit moral. The story should be engaging for a 3 year old child.  The story should approximately have 500 words"
+    private fun performAction(nameInput: String, otherInterests: String) {
+            resultTextView.text = "Generating Story..."
 
-        }
+            val selectedButtons = mutableListOf<String>()
+            if (pawpatrolbutton.isChecked) {
+                selectedButtons.add("Paw Patrol")
+            }
+            if (carbutton.isChecked) {
+                selectedButtons.add("Cars")
+            }
+            if (pikachubutton.isChecked) {
+                selectedButtons.add("Pikachu")
+            }
+            if (lionbutton.isChecked) {
+                selectedButtons.add("Lion")
+            }
+            if (peppapigbutton.isChecked) {
+                selectedButtons.add("Peppa Pig")
+            }
+            if (sciencebutton.isChecked) {
+                selectedButtons.add("Science")
+            }
+
+            val selectedButtonsString = selectedButtons.joinToString(separator = ", ")
+
+            // Instantiate the RequestQueue.
+            val queue = Volley.newRequestQueue(this)
+            val url = "https://593f-34-87-63-234.ngrok.io"
+            //Log.d("input", input)
+            val jsonObject = JSONObject()
+            var prompt:String
+            if (nameInput.isEmpty())
+            {
+                if (selectedButtons.isEmpty()) {
+                    prompt = "Make a story appropriate to a 3 year old. The story should also involve $otherInterests.The story should have many dialogs and an implicit moral. The story should be engaging for a 3 year old child.  The story should approximately have 500 words"
+                } else {
+                    prompt = "Make a story appropriate to a 3 year old. The story should also involve $otherInterests and $selectedButtonsString.The story should have many dialogs and an implicit moral. The story should be engaging for a 3 year old child.  The story should approximately have 500 words"
+                }
+            }
+            else
+            {
+                if (selectedButtons.isEmpty()) {
+                    prompt = "Make a story appropriate to a 3 year old. The story should star a 3 year old named $nameInput and also involve $otherInterests.The story should have many dialogs and an implicit moral. The story should be engaging for a 3 year old child.  The story should approximately have 500 words"
+                } else {
+                    prompt = "Make a story appropriate to a 3 year old. The story should star a 3 year old named $nameInput and also involve $otherInterests and $selectedButtonsString.The story should have many dialogs and an implicit moral. The story should be engaging for a 3 year old child.  The story should approximately have 500 words"
+                }
+
+            }
+            val addImagesIsChecked = if (addImagesCheckBox.isChecked) "true" else "false"
 
         val requestUrl = HttpUrl.Builder()
             .scheme("https")
-            .host("gpt-trials-py-run-mja7vtntja-uc.a.run.app")
+            .host("593f-34-87-63-234.ngrok.io")
             .addQueryParameter("prompt", prompt)
+            .addQueryParameter("isPictureStory", addImagesIsChecked.toString())
             .build()
 
-        // Request a string response from the provided URL.
+
+// Request a string response from the provided URL.
         val stringRequest = StringRequest(
             Request.Method.GET, requestUrl.toString(),
             Response.Listener<String> { response ->
                 val jsonResponse = JSONObject(response)
-                val story = jsonResponse.getString("response")
-                // Display the first 500 characters of the response string.
-                resultTv.text = story
+                val stories = jsonResponse.getJSONArray("stories")
+                val images = jsonResponse.getJSONArray("images")
+
+                // Log the size of the stories and images arrays
+                Log.d("MyApp", "Stories array size: ${stories.length()}")
+                Log.d("MyApp", "Images array size: ${images.length()}")
+
+                // Create a SpannableStringBuilder to hold the final text with images
+                val builder = SpannableStringBuilder()
+
+                // Check if the images array is not empty
+                if (images.length() > 0) {
+                    // Iterate over the stories and images arrays
+                    for (i in 0 until stories.length()) {
+                        // Append the current story to the builder
+                        builder.append(stories.getString(i))
+
+                        // Decode the current image from base64 and create a Bitmap
+                        val imageBytes = Base64.decode(images.getString(i), Base64.DEFAULT)
+                        val bitmap = BitmapFactory.decodeByteArray(imageBytes, 0, imageBytes.size)
+
+                        // Create an ImageSpan from the Bitmap
+                        val imageSpan = ImageSpan(this, bitmap)
+
+                        // Append a space character to the builder and set its span to the ImageSpan
+                        builder.append(" ")
+                        builder.setSpan(imageSpan, builder.length - 1, builder.length, Spanned.SPAN_EXCLUSIVE_EXCLUSIVE)
+                    }
+                } else {
+                    // The images array is empty, so just append all of the stories to the builder
+                    for (i in 0 until stories.length()) {
+                        builder.append(stories.getString(i))
+                    }
+                }
+
+                // Update the resultTextView with the final text with images
+                resultTextView.text = builder
             },
+
             Response.ErrorListener {
                 // Log the error message
                 Log.e("MyApp", "Error occurred: ${it.message}")
 
-                resultTv.text = "That didn't work!"
+                resultTextView.text = "That didn't work!"
             })
 
-        stringRequest.setRetryPolicy(object : RetryPolicy {
-            override fun getCurrentTimeout(): Int {
-                return 60000
-            }
+            stringRequest.setRetryPolicy(object : RetryPolicy {
+                override fun getCurrentTimeout(): Int {
+                    return 500000
+                }
 
-            override fun getCurrentRetryCount(): Int {
-                return 15
-            }
+                override fun getCurrentRetryCount(): Int {
+                    return 15
+                }
 
-            override fun retry(error: VolleyError?) {
+                override fun retry(error: VolleyError?) {
 
-            }
-        })
+                }
+            })
 
-        // Add the request to the RequestQueue.
-        queue.add(stringRequest)
+            // Add the request to the RequestQueue.
+            queue.add(stringRequest)
     }
-
-    fun generateImages(input:String){
-        // Instantiate the RequestQueue.
-        val queue = Volley.newRequestQueue(this)
-        val url = "https://api.openai.com/v1/images/generations"
-        //Log.d("input", input)
-        val jsonObject = JSONObject()
-        val prompt = input//"Make a story appropriate to a 3 year old. The story should also involve $input.The story should have many dialogs and a moral at the end of it."
-
-        Log.d("ImageGenerationPrompt: ", prompt)
-        jsonObject.put("prompt", prompt)
-        jsonObject.put("n", 1)
-        //jsonObject.put("stream", "True")
-        jsonObject.put("size", "256x256")
-
-        Log.d("ImageGenerationJson", jsonObject.toString())
-
-        // Request a string response from the provided URL.
-        val stringRequest = object: JsonObjectRequest(
-            Request.Method.POST, url,jsonObject,
-            Response.Listener<JSONObject> { response ->
-                var imageURL = response.getJSONArray("data").getJSONObject(0).getString("url")
-                // Display the first 500 characters of the response string.
-                //resultTv.text = imageURL
-                Glide.with(this)
-                    .load(imageURL)
-                    .into(storyImage)
-                storyImage.visibility = View.VISIBLE
-            },
-            Response.ErrorListener {
-                // Log the error message
-                Log.e("MyApp", "Error occurred: ${it.message}")
-
-                resultTv.text = "That didn't work!" })
-        {
-            override fun getHeaders(): MutableMap<String, String> {
-                var map = HashMap<String, String>()
-                map.put("Content-Type","application/json")
-                map.put("Authorization" , "Bearer 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")
-                return map
-            }
-        }
-
-        stringRequest.setRetryPolicy(object:RetryPolicy{
-            override fun getCurrentTimeout(): Int {
-                return 10000
-            }
-
-            override fun getCurrentRetryCount(): Int {
-                return 5
-            }
-
-            override fun retry(error: VolleyError?) {
-
-            }
-        })
-
-        // Add the request to the RequestQueue.
-        queue.add(stringRequest)
-    }
-
-    private fun hideComponents() {
-        initialText1.visibility = View.GONE
-        initialText2.visibility = View.GONE
-        nameInput.visibility = View.GONE
-        interestsInput.visibility = View.GONE
-        currentInterestsList.visibility = View.GONE
-        diggerButton.visibility = View.GONE
-        lionButton.visibility = View.GONE
-        magicButton.visibility = View.GONE
-        planetButton.visibility = View.GONE
-        monkeyButton.visibility = View.GONE
-        jeepButton.visibility = View.GONE
-        // ...
-    }
-    private fun showComponents() {
-        initialText1.visibility = View.VISIBLE
-        initialText2.visibility = View.VISIBLE
-        nameInput.visibility = View.VISIBLE
-        interestsInput.visibility = View.VISIBLE
-        currentInterestsList.visibility = View.VISIBLE
-        diggerButton.visibility = View.VISIBLE
-        lionButton.visibility = View.VISIBLE
-        magicButton.visibility = View.VISIBLE
-        planetButton.visibility = View.VISIBLE
-        monkeyButton.visibility = View.VISIBLE
-        jeepButton.visibility = View.VISIBLE
-
-    }
-
 }
