@@ -9,6 +9,10 @@ Creating marketing banners and YouTube thumbnails is a time-consuming and costly
 
 The self-serve tools available in the market either have very high learning curve or require expertise in graphic design subjects
 
+#### Solution
+
+An AI-powered graphic design tool to generate banners & YouTube thumbnails by understanding the user's input in their chosen natural language.
+
 
 #### Team Leader Email -
 
