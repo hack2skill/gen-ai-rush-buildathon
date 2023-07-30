@@ -68,7 +68,7 @@ type CaptionRequestDto struct {
 }
 
 type CaptionResponsetDto struct {
-	Prompt string `json:"prompt"`
+	Caption string `json:"caption"`
 }
 
 type ConnectAppsRequest struct {

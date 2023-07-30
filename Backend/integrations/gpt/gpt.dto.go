@@ -23,5 +23,5 @@ type Payload struct {
 	Temperature float32 `json:"temperature"`
 	MaxToken    uint    `json:"max_tokens"`
 	Model       string  `json:"model"`
-	TopP        string  `json:"top_p"`
+	TopP        uint    `json:"top_p"`
 }

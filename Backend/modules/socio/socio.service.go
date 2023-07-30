@@ -8,6 +8,7 @@ import (
 	"genai/integrations/diffusion"
 	"genai/integrations/gpt"
 	"genai/util"
+	"strings"
 	"time"
 
 	"github.com/golang-jwt/jwt/v4"
@@ -201,13 +202,13 @@ func CreateCaptions(ctx *context.Context, requestDto *CaptionRequestDto) *Captio
 
 	response := gpt.Predict(ctx, &gpt.Payload{
 		Prompt:      requestDto.Prompt,
-		Model:       "gpt-4",
+		Model:       "text-davinci-003",
 		Temperature: 0.6,
 		MaxToken:    256,
 	})
 
 	return &CaptionResponsetDto{
-		Prompt: response.Choices[0].Text,
+		Caption: strings.TrimSpace(response.Choices[0].Text),
 	}
 }
 
