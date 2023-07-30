@@ -9,15 +9,30 @@
 
 ## README.md must consist of the following information:
 
-#### Team Name -
-#### Problem Statement - 
-#### Team Leader Email -
+#### Team Name - ACCENOUS INTEGRALS
+#### Problem Statement - Real Time Threat Detection
+#### Team Leader Email - accenousintegrals@gmail.com
 
 ## A Brief of the Prototype:
+  ![image](https://github.com/Accenous-Integrals/gen-ai-rush-buildathon/assets/139296328/6d47373a-0fb0-4453-83a7-460fe84c6f0a)
+
+  
   This section must include UML Diagrams and prototype description
   
 ## Tech Stack: 
    List Down all technologies used to Build the prototype
+   front end :
+   react.js
+   css
+
+   Back end:
+   python
+   flask framework
+
+   version control:
+   Git
+
+   
    
 ## Step-by-Step Code Execution Instructions:
   This Section must contain a set of instructions required to clone and run the prototype so that it can be tested and deeply analyzed
