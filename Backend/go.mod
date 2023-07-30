@@ -6,7 +6,6 @@ require (
 	github.com/aws/aws-sdk-go v1.44.312
 	github.com/go-co-op/gocron v1.17.0
 	github.com/go-logr/stdr v1.2.2
-	github.com/go-redis/redis/v8 v8.11.5
 	github.com/golang-jwt/jwt v3.2.2+incompatible
 	github.com/google/uuid v1.3.0
 	github.com/gorilla/handlers v1.5.1
@@ -21,8 +20,6 @@ require (
 )
 
 require (
-	github.com/cespare/xxhash/v2 v2.1.2 // indirect
-	github.com/dgryski/go-rendezvous v0.0.0-20200823014737-9f7001d12a5f // indirect
 	github.com/felixge/httpsnoop v1.0.1 // indirect
 	github.com/go-logr/logr v1.2.3 // indirect
 	github.com/jmespath/go-jmespath v0.4.0 // indirect
@@ -32,6 +29,7 @@ require (
 	golang.org/x/lint v0.0.0-20201208152925-83fdc39ff7b5 // indirect
 	golang.org/x/net v0.10.0 // indirect
 	golang.org/x/tools v0.6.0 // indirect
+	gopkg.in/yaml.v2 v2.4.0 // indirect
 )
 
 require (
