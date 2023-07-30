@@ -1,0 +1,89 @@
+name: Run Functional Test Case
+
+on:
+  push:
+    branches:
+      - master 
+    paths:
+      - 'src/functional/*.java'
+
+jobs:
+#   Build:
+#     name: Build
+#     runs-on: ubuntu-latest
+
+#     steps:
+#       - name: Checkout code
+#         uses: actions/checkout@v2
+
+#       - name: Set up JDK 11
+#         run: |
+#           sudo apt-get update
+#           sudo apt-get install -y openjdk-11-jdk
+#           echo "export JAVA_HOME=/usr/lib/jvm/java-11-openjdk-amd64" >> $GITHUB_ENV
+#           echo "export PATH=\${JAVA_HOME}/bin:\${PATH}" >> $GITHUB_ENV
+
+#       - name: Build with Maven
+#         run: mvn clean package
+        
+  Deploy:
+    name: Deploy
+#     needs: Build
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+        
+      - name: Install dependencies
+        run: |
+          sudo apt-get update -qy
+          sudo apt-get install -y openssh-client
+
+      - name: Build with Maven
+        run: mvn clean package
+
+      - name: Deploy Application
+        run: |
+          echo "Hello ${{ secrets.SSH_PRIVATE_KEY }}"
+          eval $(ssh-agent -s)
+          echo "${{ secrets.SSH_PRIVATE_KEY }}" | tr -d '\r' | ssh-add -
+          scp -o StrictHostKeyChecking=no target/*.jar ubuntu@54.161.80.51:/opt/Smart-Bank-Spring-boot-Application-0.0.1-SNAPSHOT.jar
+          ssh -o StrictHostKeyChecking=no ubuntu@54.161.80.51 "nohup java -jar /opt/Smart-Bank-Spring-boot-Application-0.0.1-SNAPSHOT.jar > /opt/application.log 2>&1 &"
+          echo "Smart-Bank-Spring-boot-Application deployed and running in the background."
+  
+  functional-test:
+    name: Functional-Test
+    needs: Deploy
+    runs-on: self-hosted
+
+    steps:
+    - name: Checkout repository
+      uses: actions/checkout@v2
+      
+    - name: Set up Chrome and ChromeDriver
+      run: |
+        cd src/functional
+        sudo apt update
+        sudo apt install -y unzip xvfb libxi6 libgconf-2-4
+        sudo apt install -y default-jdk
+        sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-keys 4EB27DB2A3B88B8B
+        sudo bash -c "echo 'deb [arch=amd64] http://dl.google.com/linux/chrome/deb/ stable main' >> /etc/apt/sources.list.d/google-chrome.list"
+        sudo apt -y update
+        sudo apt -y install google-chrome-stable
+        google-chrome --version
+        wget https://chromedriver.storage.googleapis.com/114.0.5735.90/chromedriver_linux64.zip
+        unzip chromedriver_linux64.zip
+        sudo mv chromedriver /usr/bin/chromedriver
+        sudo chown root:root /usr/bin/chromedriver
+        sudo chmod +x /usr/bin/chromedriver
+        wget https://selenium-release.storage.googleapis.com/3.141/selenium-server-standalone-3.141.59.jar
+        mv selenium-server-standalone-3.141.59.jar selenium-server-standalone.jar
+        wget http://www.java2s.com/Code/JarDownload/testng/testng-6.8.7.jar.zip
+        unzip testng-6.8.7.jar.zip
+        xvfb-run java -Dwebdriver.chrome.driver=/usr/bin/chromedriver -jar selenium-server-standalone.jar & 
+        export CLASSPATH=".:selenium-server-standalone.jar:testng-6.8.7.jar"
+        wget https://repo1.maven.org/maven2/commons-io/commons-io/2.11.0/commons-io-2.11.0.jar
+        javac -cp ".:selenium-server-standalone.jar:testng-6.8.7.jar:commons-io-2.11.0.jar" LoginTest.java
+        java -cp ".:selenium-server-standalone.jar:testng-6.8.7.jar:commons-io-2.11.0.jar" LoginTest
+      # Handle errors
+      continue-on-error: true
