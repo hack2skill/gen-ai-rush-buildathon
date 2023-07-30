@@ -11,7 +11,7 @@ akshat.khare08@gmail.com
 
 ## A Brief of the Prototype
 Our prototype is a Slack bot that communicates with various APIs to automate tasks and provide insightful RCAs. The bot uses advanced AI models to understand user inputs and generate meaningful outputs. Here is a simplified UML diagram of our prototype:
-![tech](https://github.com/akshat-khare/SmarterPath/assets/25928898/a89904b9-f581-44c8-8301-474daa88c665)
+![tech](https://storage.googleapis.com/assets_optibuild/content/techsmarterpath.png)
 Try it out at our ![slack channel](https://join.slack.com/t/smarterpathworkspace/shared_invite/zt-206kfd5lg-nle9hCS8DAXxWGruWuy6aQ)!
 
 
