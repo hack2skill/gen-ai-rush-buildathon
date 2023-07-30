@@ -19,7 +19,7 @@ btn.addEventListener('click',()=>{
                 btn.setAttribute('href','lamborghini.html');
                 break;
         default:
-            btn.setAttribute('href','cube.html');
+            btn.setAttribute('href','default.html');
             break;
 
     }
