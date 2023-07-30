@@ -1,0 +1,20 @@
+[
+  {
+    "id": "my-socio",
+    "name": "My Socio",
+    "icon": "/connectable-app-icons/my-socio.png",
+    "disabled": false
+  },
+  {
+    "id": "facebook",
+    "name": "Facebook",
+    "icon": "/connectable-app-icons/facebook.png",
+    "disabled": true
+  },
+  {
+    "id": "linkedin",
+    "name": "LinkedIn",
+    "icon": "/connectable-app-icons/linkedIn.png",
+    "disabled": true
+  }
+]
