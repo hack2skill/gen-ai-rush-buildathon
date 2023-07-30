@@ -22,5 +22,5 @@ NodeJS
 Twilio API for SMS
 
 What I Learned:
-Write about the biggest learning you had while developing the prototype
+- How to retrain an LLM on unstructured datasets like medical record data, patient context
 
