@@ -37,10 +37,11 @@ def load(filename):
     
 
 import openai
+from Apikey import OPENAI_API_KEY
 
 def noob_wrapper(gender, obesity, severity_grading_score, age):
 
-    openai.api_key = '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'
+    openai.api_key = OPENAI_API_KEY
     
     prompt = "You are a arthritis doctor and your patient has osteoarthritis."
     
