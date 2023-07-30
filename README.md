@@ -36,7 +36,7 @@
 ## Tech Stack: 
 ● Next.js
 ● Tailwind CSS
-● Node.js / Express.js
+● Flask
 ● MongoDB
 ● TensorFlow
 ● Keras
