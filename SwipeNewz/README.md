@@ -28,6 +28,11 @@ hiteshgautam026@gmail.com /  harry.gautam980@gmail.com
   Go to backend folder --> Add keys ( OpenAI, StableDiffusion ) --> Run this python.py 
 
   Find our app android APK hosted - https://drive.google.com/file/d/1lbVzBM5m2m3UB0OkgErG9Z33Ly-pCl-U/view?usp=sharing
+  Or Scan QR code
+  ![bit ly_swipenewz](https://github.com/HiteshG/gen-ai-rush-buildathon/assets/28000328/1439c83a-683c-465a-9e83-5d0badc6f273)
+
+## Presentation PDF:
+  
 
 ## Demo Video:
 https://drive.google.com/file/d/1IPKj02i8GhKGRfs6h_JXKLL5wZbkdU9_/view?usp=sharing
