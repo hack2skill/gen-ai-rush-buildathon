@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Result Page</title>
+</head>
+<body>
+	<div class="container">
+	    <h1>Result:</h1>
+	    <p th:each="item : ${result}" th:text="${item}">
+	    </p>
+    </div>
+</body>
+<style>
+body {
+        font-family: Arial, sans-serif;
+        text-align: center;
+        margin: 40px;
+        background-color: #CEE6F3; 
+    }
+
+    .container {
+        max-width: 500px;
+        margin: 0 auto;
+        padding: 20px;
+        background-color: #fff; 
+        border-radius: 8px;
+        box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15); 
+    }
+</style>
+</html>
