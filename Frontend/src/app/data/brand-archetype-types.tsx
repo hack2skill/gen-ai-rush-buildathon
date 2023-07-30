@@ -1,0 +1,15 @@
+export const brandArchetypeTypes = [
+  "",
+  "Innocent",
+  "Sage",
+  "Explorer",
+  "Outlaw",
+  "Magician",
+  "Hero",
+  "Lover",
+  "Jester",
+  "Everyman",
+  "Caregiver",
+  "Ruler",
+  "Creator",
+];
