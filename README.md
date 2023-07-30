@@ -3,6 +3,8 @@
 #### Problem Statement - Harnessing the Full Potential of Generative AI: Smartphone users face difficulties in effectively utilizing Generative AI for various tasks, hindering their productivity and creativity.
 #### Team Leader Email - kailashps.1011@gmail.com
 
+[PPT-Link](https://www.canva.com/design/DAFqCua3R_o/ckTBh-Gn4nHTESCmuWfe5A/edit?utm_content=DAFqCua3R_o&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton) <b>All Demo Videos are accessible here</b>
+
 ## A Brief of the Prototype:
   AI Everywhere on Your Smartphone: Our app brings the power of Generative AI to your fingertips, allowing you to access personalized productivity recommendations and mental health support anytime, anywhere.
 
