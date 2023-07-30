@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="utf-8"?>
+    <LinearLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:background="@color/backgroundpink">
+
+    <LinearLayout
+        android:id="@+id/InputLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="15sp"
+            android:layout_marginBottom="15sp">
+
+            <ToggleButton
+                android:id="@+id/pawpatrolbutton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="15sp"
+                android:background="@drawable/button_toggle"
+                android:drawableTop="@mipmap/pawpatrol_foreground"
+                android:textOn=""
+                android:textOff="" />
+
+            <ToggleButton
+                android:id="@+id/carbutton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="15sp"
+                android:drawableTop="@mipmap/car_foreground"
+                android:background="@drawable/button_toggle"
+                android:textOn=""
+                android:textOff="" />
+
+            <ToggleButton
+                android:id="@+id/pikachubutton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:drawableTop="@mipmap/doremon_foreground"
+                android:background="@drawable/button_toggle"
+                android:textOn=""
+                android:textOff=""
+                />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginBottom="15sp">
+
+            <ToggleButton
+                android:id="@+id/lionbutton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="15sp"
+                android:layout_marginLeft="10sp"
+                android:drawableTop="@mipmap/lion_foreground"
+                android:background="@drawable/button_toggle"
+                android:textOn=""
+                android:textOff=""
+                />
+
+            <ToggleButton
+                android:id="@+id/peppapigbutton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="15sp"
+                android:drawableTop="@mipmap/peppapig_foreground"
+                android:background="@drawable/button_toggle"
+                android:textOn=""
+                android:textOff=""
+                />
+
+            <ToggleButton
+                android:id="@+id/sciencebutton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="15sp"
+                android:drawableTop="@mipmap/science_foreground"
+                android:background="@drawable/button_toggle"
+                android:textOn=""
+                android:textOff=""
+                />
+        </LinearLayout>
+
+        <EditText
+            android:id="@+id/other_interests_edittext"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="#ffffff"
+            android:textColorHint="#ffffff"
+            android:textSize="18sp"
+            android:background="@color/backgroundblue"
+            android:maxLines="1"
+            android:singleLine="true"
+            android:layout_marginVertical="5sp"
+            android:hint="Enter other interests" />
+
+        <EditText
+            android:id="@+id/child_name_edittext"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="#ffffff"
+            android:textColorHint="#ffffff"
+            android:textSize="18sp"
+            android:background="@color/backgroundblue"
+            android:maxLines="1"
+            android:singleLine="true"
+            android:layout_marginVertical="5sp"
+            android:hint="Enter child's name" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="24sp"
+            android:layout_marginVertical="5sp"
+            android:orientation="horizontal">
+
+            <ImageButton
+                android:id="@+id/play_audio"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:src="@mipmap/volume_dark_foreground" />
+
+            <CheckBox
+                android:id="@+id/add_images_checkbox"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Picture Story"
+                android:textSize="18sp"
+                 />
+
+        </LinearLayout>
+
+
+        <Button
+            android:id="@+id/submit_button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="#ffffff"
+            android:textSize="18sp"
+            android:layout_marginVertical="5sp"
+            android:background="@color/foregroundpink"
+            android:text="Generate Story" />
+
+    </LinearLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/outputpink">
+
+        <LinearLayout
+            android:id="@+id/OutputLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/resultTv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="#ffffff"
+                android:textSize="18sp"
+                android:text="Your story will appear here" />
+        </LinearLayout>
+
+        </ScrollView>
+    </LinearLayout>

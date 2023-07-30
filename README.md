@@ -9,18 +9,18 @@
 
 ## README.md must consist of the following information:
 
-#### Team Name -
-#### Problem Statement - 
-#### Team Leader Email -
+#### Team Name - Tobena
+#### Problem Statement -  Personalized Entertainement for Kids
+#### Team Leader Email - gandharv.bakshi@gmail.com  
 
 ## A Brief of the Prototype:
-  This section must include UML Diagrams and prototype description
-  
+An Android app that takes in a child's interests - basis the interests, the app then creates stories (with images and accompanying audio) that the child can enjoy!
+
 ## Tech Stack: 
-   List Down all technologies used to Build the prototype
-   
+Kotlin for Front end, Python for back end. GPT-3.5-turbo for story generation, Google TTS / ElevenLabs for Voice generation, and Stable Diffusion XL 1.0 for Image generation 
+
 ## Step-by-Step Code Execution Instructions:
-  This Section must contain a set of instructions required to clone and run the prototype so that it can be tested and deeply analyzed
+  Open in Android Studio and make the app! 
   
 ## What I Learned:
-   Write about the biggest learning you had while developing the prototype
+   Write about the biggest learning you had while developing the prototype: How to train Stable Diffusion XL on personal images to generate consistent images! 
