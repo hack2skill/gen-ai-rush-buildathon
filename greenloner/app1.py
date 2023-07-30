@@ -8,7 +8,7 @@ from dotenv import load_dotenv
 #load_dotenv()
 
 import openai
-os.environ['OPENAI_API_KEY'] = "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"
+os.environ['OPENAI_API_KEY'] = ""
 
 def create_data_directory():
     if not os.path.exists("data"):

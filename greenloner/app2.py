@@ -9,7 +9,7 @@ import openai
 load_dotenv()
 
 #os.environ['OPENAI_API_KEY'] = 
-openai.api_key = 
+openai.api_key = ""
 
 #function to save a file
 def save_uploadedfile(uploadedfile):
