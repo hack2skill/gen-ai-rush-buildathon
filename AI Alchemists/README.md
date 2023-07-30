@@ -44,7 +44,21 @@
    
 ## Step-by-Step Code Execution Instructions:
   - Clone this repository ```git clone https://github.com/jaishana25/gen-ai-rush-buildathon.git```
-  - ```cd gen-ai-rush-buildathon/AI
+  - ```cd '.\gen-ai-rush-buildathon\AI Alchemists\'```
+  - Start up the backend server with the following command: 
+  ```
+  cd backend
+  cd FlaskDeployedApp
+  pip install -r requirements.txt
+  python app.py
+  ```
+  - Start the React App in another terminal:
+  ```
+  cd client
+  npm install
+  npm start
+  ```
+  - Access the React App on ```localhost:3000```
   
 ## What I Learned:
   The biggest learning during the development of the crop disease detection prototype was the significant impact of data quality and diversity on the effectiveness of the system. In order to create an accurate and reliable model, we needed a diverse dataset of crop images representing various diseases, growth stages, lighting conditions, and environmental factors.
