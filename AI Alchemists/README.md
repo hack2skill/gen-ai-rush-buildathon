@@ -15,6 +15,7 @@
 
 ## A Brief of the Prototype:
   ![Sequence Diagram](seq.png)
+  ![UseCase Diagram](usecase.jpg)
 
 
   Protoype: The prototype is a web-based platform designed for farmers to identify and address crop diseases efficiently.
