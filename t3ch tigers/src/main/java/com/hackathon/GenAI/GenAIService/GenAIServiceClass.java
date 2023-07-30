@@ -50,7 +50,7 @@ public class GenAIServiceClass {
 		log.info(gsonStringreqBody);
 		
 		final StringEntity entity = new StringEntity(gsonStringreqBody);
-	    final String access_token = "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";
+	    final String access_token = "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";
 	    
 	    final String playgroundurl = "https://api.openai.com/v1/chat/completions";
 	    
@@ -63,23 +63,15 @@ public class GenAIServiceClass {
 				
 				try (CloseableHttpClient httpClient = HttpClients.custom().build();
 						CloseableHttpResponse response = httpClient.execute(gptrequest)) {
-					//String jsonObject = new JSONObject(response);
 					String responseBody = EntityUtils.toString(response.getEntity());
-					//responseBody = responseBody.substring(1, responseBody.length()-1);
 					Gson g = new Gson();  
 					HashMap<String, Object> msg = g.fromJson(responseBody, HashMap.class);
+					System.out.println(msg.get("choices"));
+					String msgString = msg.get("choices").toString();
+					String formattedString = msgString.substring(46, msgString.length()-23);
+					log.info("Done!");
 					
-					ArrayList msgch = new ArrayList();
-					msgch = (ArrayList) msg.get("choices");
-					log.info((String) msgch.get(0));
-					//HashMap<String, Object> msgchoice = g.fromJson((String) msgch.get(0), HashMap.class);
-					
-					
-					//log.info("Response: "+ responseBody);
-					 //log.info("Choices extracted "+responseBody);
-					 log.info("Done!");
-					 
-					 return "success";
+					return formattedString;
 					
 				}
 				catch (Exception e) {

@@ -1,13 +1,122 @@
 <!DOCTYPE html>
 <html xmlns:th="http://www.thymeleaf.org">
 <head>
-    <title>File Upload Example</title>
+    <title>GenAI</title>
 </head>
 <body>
-    <h2>File Upload Example</h2>
-    <form method="post" action="/upload" enctype="multipart/form-data">
-        <input type="file" name="file" id="file" />
-        <input type="submit" value="Upload" />
-    </form>
+    <div class="container">
+        <h1 class="title">SecurAssist</h1>
+        <p class="description">Welcome to SecurAssist! This is a threat detector and prevents security breaches in an organization</p>
+        <form method="post" action="/upload" enctype="multipart/form-data" onsubmit="showLoadingAnimation()">
+            <input type="file" name="file" id="file" />
+            <input type="submit" value="Upload" id="uploadButton"/>
+        </form>
+    </div>
+
+    <div id="loadingOverlay">
+        <div class="loader"></div>
+        <p>Results Analyzing...</p>
+    </div>
+
+    <script>
+        function showLoadingAnimation() {
+            document.getElementById("loadingOverlay").style.display = "block";
+        }
+    </script>
 </body>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        text-align: center;
+        margin: 40px;
+        background-color: #CEE6F3; 
+    }
+
+    .container {
+        max-width: 500px;
+        margin: 0 auto;
+        padding: 20px;
+        background-color: #fff;
+        border-radius: 8px;
+        box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15); /* Shadow effect */
+    }
+
+    .title {
+        color: #3498db;
+        font-size: 36px;
+        margin-bottom: 20px;
+    }
+
+    .description {
+        color: #555; 
+        font-size: 18px;
+        margin-bottom: 30px;
+    }
+
+    form {
+        margin-top: 20px;
+    }
+
+    input[type="file"] {
+        display: block;
+        margin: 10px auto;
+    }
+    
+    #file {
+        display: block;
+        margin: 10px auto;
+        background-color: #3498db; 
+        color: #fff; 
+        padding: 10px 20px;
+        border: none;
+        border-radius: 5px;
+        font-size: 16px;
+        cursor: pointer;
+    }
+
+    #uploadButton {
+        display: block;
+        margin: 10px auto;
+        background-color: #3498db; 
+        color: #fff; 
+        padding: 10px 20px;
+        border: none;
+        border-radius: 5px;
+        font-size: 16px;
+        cursor: pointer;
+    }
+
+    /* Loading Animation Styles */
+    #loadingOverlay {
+        display: none;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.8);
+        z-index: 9999;
+    }
+
+    .loader {
+        border: 6px solid #f3f3f3; 
+        border-top: 6px solid #3498db; 
+        border-radius: 50%;
+        width: 60px;
+        height: 60px;
+        animation: spin 2s linear infinite;
+        margin: 100px auto;
+    }
+
+    @keyframes spin {
+        0% { transform: rotate(0deg); }
+        100% { transform: rotate(360deg); }
+    }
+
+    #loadingOverlay p {
+        color: white;
+        font-size: 18px;
+        margin-top: 20px;
+    }
+</style>
 </html>
