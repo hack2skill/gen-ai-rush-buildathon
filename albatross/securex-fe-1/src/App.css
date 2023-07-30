@@ -1,0 +1,173 @@
+body {
+  margin: 0;
+  padding: 0;
+  overflow: hidden; /* Prevent scrolling on the body */
+}
+
+.App {
+  text-align: center;
+  display: flex;
+  justify-content: space-between;
+  padding: 20px;
+  background-color: #181818;
+  box-sizing: border-box;
+  height: 100vh;
+  color: #eee;
+}
+
+.chat-section, .info-section {
+  padding: 20px;
+  overflow-y: auto;
+  height: calc(100vh - 100px);
+}
+
+.chat-section {
+  position: relative;
+  padding: 20px;
+  width: 60%;
+  height: 100%;
+  overflow: hidden; /* This will contain the chat box and input */
+}
+
+.info-section {
+  width: 40%;
+  background-color: #1f1f1f;
+}
+
+.chat-bubble {
+  max-width: 60%;
+  border-radius: 7px;
+  padding: 10px;
+  margin-bottom: 10px;
+  background-color: #333;
+  box-shadow: 0 1px 1px rgba(255,255,255,0.1);
+}
+
+.pii-form-container {
+  background-color: #131C21; /* Dark color like WhatsApp */
+  color: #f5f5f5;
+  padding: 20px;
+  height: 100vh;
+}
+
+.pii-form h1 {
+  margin-bottom: 20px;
+}
+
+.pii-form label {
+  display: flex;
+  align-items: center;
+  margin: 10px 0;
+  width: 200px;
+  color: #fff; /* White text for dark background */
+}
+
+.info-box p {
+  margin-bottom: 10px;
+}
+
+.user {
+  align-self: flex-end;
+  background-color: #007965;
+}
+
+.response, .chat-bubble.response {
+  align-self: flex-start;
+  background-color: #333;
+}
+
+.pii-form input[type="checkbox"] {
+  margin-right: 10px;
+}
+
+.pii-form button {
+  display: block;
+  margin: 20px auto; /* Centering the button horizontally */
+  background-color: #25D366; /* WhatsApp green */
+  color: #fff; /* White text */
+  padding: 10px 20px;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.pii-form button:hover {
+  background-color: #128C7E; /* Darker green on hover */
+}
+
+.chat-input {
+  position: absolute;
+  bottom: 40px;
+  left: 20px;
+  right: 20px;
+  display: flex;
+  justify-content: space-between;
+  background-color: #333;
+  border-radius: 7px;
+  padding: 5px;
+  align-items: center;
+}
+
+.chat-input input {
+  width: 80%;
+  padding: 5px 10px;
+  border-radius: 5px;
+  border: none;
+}
+
+.chat-input button {
+  padding: 5px 10px;
+  background-color: #34b7f1;
+  border: none;
+  color: white;
+  cursor: pointer;
+}
+
+.chat-box {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  right: 20px;
+  bottom: 60px; /* Provide space for the chat input */
+  overflow-y: scroll;
+  display: flex;
+  flex-direction: column;
+}
+
+.pii-form {
+  background-color: #2A2A2A;
+  padding: 20px;
+  color: #fff;
+  text-align: center;
+}
+
+.pii-form .checkbox-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.checkbox-label {
+  margin: 5px 0;
+}
+
+.checkbox-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Aligns the checkboxes vertically */
+  justify-content: center;
+}
+
+.submit-button {
+  background-color: #25D366;
+  color: #fff;
+  padding: 8px 16px;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+  display: block;
+  margin: 20px auto; /* Centers the button horizontally */
+}
+
+
+
