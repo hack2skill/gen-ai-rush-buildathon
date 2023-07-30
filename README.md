@@ -18,7 +18,7 @@
   https://drive.google.com/drive/folders/1CHrxZy5DmxPt9kJs14eQW8hwUBqg_vJ8?usp=sharing
    
 ## Step-by-Step Code Execution Instructions:
-  1) Navigate to the GDPR folder , and run the 'ai.py' file.
+  1) Navigate to the ai.py file , and run it using 'python ai.py' command
   2) The chatbot is fine-tuned using curie engine of gpt-3.5 and is prompted to answer specific set of questions
   3) write the "Get me the data breaches for" + "Any country in the list [India , Australia , UK , France , Germany , Brazil, China , USA]"
      This shall give a json output which indicates the number of breaches according to 'Name' , 'Email', 'Financial-Information' etc, related       to the first , second and third Rules of the GDPR rule set
