@@ -1,0 +1,67 @@
+{
+  "projects": [
+    {
+      "title": "Sentiment analysis product rating",
+      "tag": "AI/ML",
+      "description": "This project aims to develop a sentiment analysis system for product rating. It is an e-commerce web application. The main goal of this sentiment analysis system is to understand the hidden sentiments of customers in feedback and comments and analyze their product rating patterns.",
+      "image": "https://cdn.analyticsvidhya.com/wp-content/uploads/2020/08/Sentiment-Analysis-scaled.jpg",
+      "imageText": "Sentiment analysis for product rating"
+    },
+    {
+      "title": "Fingerprint-based ATM system",
+      "tag": "IOT",
+      "description": "This project is a desktop application that uses the fingerprint of users for authentication. Since each individual has a unique fingerprint, this method of using fingerprint as a means of authentication to access your ATM is safer and more secure than using an ATM card. Users need not carry their ATM cards with them at all times – they can use their fingerprint to access ATM services. ",
+      "image": "https://api.army.mil/e2/c/images/2020/02/04/576140/original.jpg",
+      "imageText": "Fingerprint-based ATM system"
+    },
+    {
+      "title": "Weather forecasting system",
+      "tag": "AI/ML",
+      "description": "Weather forecasting systems use a combination of science and technology to make accurate predictions on weather conditions of a particular location at a particular time. Weather forecast systems and applications predict weather conditions based on multiple parameters, such as pressure, temperature, humidity, wind speed, etc.",
+      "image": "https://www.sciencenewsforstudents.org/wp-content/uploads/2019/11/860_main_weather_and_prediction.png",
+      "imageText": "Weather forecasting system"
+    },
+    {
+      "title": "Image encryption using AES algorithm",
+      "tag": "DS Oriented",
+      "description": "When it comes to communication and imaging systems, you need to incorporate the highest level of security in place. Without a reliable and secure system, there’s a massive threat to sensitive data. Cybercriminals and hackers are always on the lookout for hacking into confidential data, which puts it at risk of being violated. ",
+      "image": "https://store.hp.com/app/assets/images/uploads/prod/how-different-types-of-encryption-are-used-hero1562082216786524.jpg",
+      "imageText": "Image encryption using AES algorithm"
+    },
+    {
+      "title": "Android Patient Tracker",
+      "tag": "Mobile - Android",
+      "description": "This project involves the development of an Android application for viewing and managing patient data. The app is designed to help doctors to see the medical history of their patients. Doctors can also continually upgrade the system by entering the latest medical data of their patients. ",
+      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQaTWbSRXArrIZtsB3CKh1vqk3lMeytWiJfUA&usqp=CAU",
+      "imageText": "Android Patient Tracker"
+    },
+    {
+      "title": "Automated payroll system with GPS tracking and image capture",
+      "tag": "AI/ML, IOT",
+      "description": "This automated payroll system doubles up as a web and Android application – while the user will use the Android interface, the Admin (usually the HR) will use the web interface. ",
+      "image": "https://edtechmagazine.com/higher/sites/edtechmagazine.com.higher/files/styles/cdw_hero/public/articles/%5Bcdw_tech_site%3Afield_site_shortname%5D/202003/GettyImages-1093593674.jpg?itok=TlfeRdoH",
+      "imageText": "Automated payroll system with GPS tracking and image capture"
+    },
+    {
+      "title": "Sentiment analysis product rating",
+      "tag": "AI/ML",
+      "description": "This project aims to develop a sentiment analysis system for product rating. It is an e-commerce web application. The main goal of this sentiment analysis system is to understand the hidden sentiments of customers in feedback and comments and analyze their product rating patterns.",
+      "image": "https://cdn.analyticsvidhya.com/wp-content/uploads/2020/08/Sentiment-Analysis-scaled.jpg",
+      "imageText": "Sentiment analysis for product rating"
+    },
+    {
+      "title": "Fingerprint-based ATM system",
+      "tag": "IOT",
+      "description": "This project is a desktop application that uses the fingerprint of users for authentication. Since each individual has a unique fingerprint, this method of using fingerprint as a means of authentication to access your ATM is safer and more secure than using an ATM card. Users need not carry their ATM cards with them at all times – they can use their fingerprint to access ATM services. ",
+      "image": "https://api.army.mil/e2/c/images/2020/02/04/576140/original.jpg",
+      "imageText": "Fingerprint-based ATM system"
+    },
+    {
+      "title": "Weather forecasting system",
+      "tag": "AI/ML",
+      "description": "Weather forecasting systems use a combination of science and technology to make accurate predictions on weather conditions of a particular location at a particular time. Weather forecast systems and applications predict weather conditions based on multiple parameters, such as pressure, temperature, humidity, wind speed, etc.",
+      "image": "https://www.sciencenewsforstudents.org/wp-content/uploads/2019/11/860_main_weather_and_prediction.png",
+      "imageText": "Weather forecasting system"
+    }
+  ]
+}
