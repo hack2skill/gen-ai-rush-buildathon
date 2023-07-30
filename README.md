@@ -70,6 +70,9 @@ Following latest Android Norms
 -  If it is `lower` than given AGP follow given steps :-
 -  -  #### Go to gradle/libs.version.toml
    -  #### In [versions] change value of AGP as per requirement
+ 
+- Node Js Backend
+  - run node app.js
   
    
 ## Acknowledgements
