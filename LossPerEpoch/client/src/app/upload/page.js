@@ -85,9 +85,18 @@ export default function Basic(props) {
             redirect: "follow",
           };
 
-        const response = await fetch("https://f5c7-14-142-151-66.ngrok-free.app/doxify", requestOptions);
+        const response = await fetch("https://b02b-14-142-151-66.ngrok-free.app/doxify", requestOptions);
         if (response.ok) {
             console.log("all is good")
+            const blob = await response.blob();
+            const downloadUrl = URL.createObjectURL(blob);
+            const link = document.createElement('a');
+            link.href = downloadUrl;
+            link.setAttribute('download', 'docs.zip'); // Specify the filename for the downloaded file
+            document.body.appendChild(link);
+            link.click();
+            link.remove();
+            
         }
     }
 
