@@ -1,0 +1,88 @@
+[versions]
+agp = "8.1.0"
+appcompat = "1.6.1"
+firebaseMessagingKtx = "23.1.2"
+kotlin = "1.8.10"
+core-ktx = "1.9.0"
+junit = "4.13.2"
+androidx-test-ext-junit = "1.1.5"
+espresso-core = "3.5.1"
+kotlinStdlib = "1.8.22"
+lifecycle-runtime-ktx = "2.6.1"
+activity-compose = "1.7.2"
+compose-bom = "2023.06.01"
+ktor-version = "1.6.4"
+coil = "2.2.2"
+dagger = "2.45"
+accompanist = "0.28.0"
+extended-icons = "1.4.3"
+firebase-auth-ktx = "22.0.0"
+firebase-bom = "32.1.1"
+play-services-auth = "20.5.0"
+room-version = "2.5.0"
+datastorePreferencesCore = "1.0.0"
+cameraX = "1.0.2"
+playServicesMlkitTextRecognitionCommon = "19.0.0"
+playServicesMlkitTextRecognition = "19.0.0"
+splittiesViews = "3.0.0"
+splittiesSystemservices = "3.0.0"
+
+[libraries]
+androidx-appcompat = { module = "androidx.appcompat:appcompat", version.ref = "appcompat" }
+androidx-lifecycle-service = { module = "androidx.lifecycle:lifecycle-service", version.ref = "lifecycle-runtime-ktx" }
+core-ktx = { group = "androidx.core", name = "core-ktx", version.ref = "core-ktx" }
+accompanist-navigation = { group = "com.google.accompanist", name = "accompanist-navigation-animation", version.ref = "accompanist" }
+firebase-messaging-ktx = { module = "com.google.firebase:firebase-messaging-ktx", version.ref = "firebaseMessagingKtx" }
+junit = { group = "junit", name = "junit", version.ref = "junit" }
+firebase-bom = { group = "com.google.firebase", name = "firebase-bom", version.ref = "firebase-bom" }
+kotlin-stdlib = { module = "org.jetbrains.kotlin:kotlin-stdlib", version.ref = "kotlinStdlib" }
+lottie = { group = "com.airbnb.android", name = "lottie-compose", version = "5.2.0" }
+material-icons-extended = { group = "androidx.compose.material", name = "material-icons-extended", version.ref = "extended-icons" }
+androidx-test-ext-junit = { group = "androidx.test.ext", name = "junit", version.ref = "androidx-test-ext-junit" }
+espresso-core = { group = "androidx.test.espresso", name = "espresso-core", version.ref = "espresso-core" }
+ktor-client-android = { group = "io.ktor", name = "ktor-client-android", version.ref = "ktor-version" }
+ktor-client-core = { group = "io.ktor", name = "ktor-client-core", version.ref = "ktor-version" }
+ktor-client-serialization = { group = "io.ktor", name = "ktor-client-serialization", version.ref = "ktor-version" }
+ktor-client-logging = { group = "io.ktor", name = "ktor-client-logging", version.ref = "ktor-version" }
+ktor-client-gson = { group = "io.ktor", name = "ktor-client-gson", version.ref = "ktor-version" }
+ktor-client-cio = { group = "io.ktor", name = "ktor-client-cio", version.ref = "ktor-version" }
+dagger-hilt = { group = "com.google.dagger", name = "hilt-android", version.ref = "dagger" }
+dagger-hilt-navigation = { group = "androidx.hilt", name = "hilt-navigation-compose", version = "1.0.0" }
+dagger-hilt-kapt = { group = "com.google.dagger", name = "hilt-compiler", version = "2.45" }
+splitties-views = { module = "com.louiscad.splitties:splitties-views", version.ref = "splittiesViews" }
+splitties-systemservices = { module = "com.louiscad.splitties:splitties-systemservices", version.ref = "splittiesSystemservices" }
+viewmodel-compose = { group = "androidx.lifecycle", name = "lifecycle-viewmodel-compose", version = "2.6.1" }
+lifecycle-runtime-ktx = { group = "androidx.lifecycle", name = "lifecycle-runtime-ktx", version.ref = "lifecycle-runtime-ktx" }
+activity-compose = { group = "androidx.activity", name = "activity-compose", version.ref = "activity-compose" }
+compose-bom = { group = "androidx.compose", name = "compose-bom", version.ref = "compose-bom" }
+coilx = { group = "io.coil-kt", name = "coil-compose", version.ref = "coil" }
+room-runtime = { group = "androidx.room", name = "room-runtime", version.ref = "room-version" }
+room-compiler = { group = "androidx.room", name = "room-compiler", version.ref = "room-version" }
+room-ktx = { group = "androidx.room", name = "room-ktx", version.ref = "room-version" }
+ui = { group = "androidx.compose.ui", name = "ui" }
+ui-graphics = { group = "androidx.compose.ui", name = "ui-graphics" }
+ui-tooling = { group = "androidx.compose.ui", name = "ui-tooling" }
+ui-tooling-preview = { group = "androidx.compose.ui", name = "ui-tooling-preview" }
+ui-test-manifest = { group = "androidx.compose.ui", name = "ui-test-manifest" }
+ui-test-junit4 = { group = "androidx.compose.ui", name = "ui-test-junit4" }
+material3 = { group = "androidx.compose.material3", name = "material3" }
+firebase-auth-ktx = { group = "com.google.firebase", name = "firebase-auth-ktx", version.ref = "firebase-auth-ktx" }
+play-services-auth = { group = "com.google.android.gms", name = "play-services-auth", version.ref = "play-services-auth" }
+datastore-core = { group = "androidx.datastore", name = "datastore-preferences", version.ref = "datastorePreferencesCore" }
+permissions = { group = "com.google.accompanist", name = "accompanist-permissions", version.ref = "accompanist" }
+mlkit-barcode = { group = "com.google.mlkit", name = "barcode-scanning", version = "17.1.0" }
+cameraX-core = { group = "androidx.camera", name = "camera-core", version.ref = "cameraX" }
+cameraX-camera2 = { group = "androidx.camera", name = "camera-camera2", version.ref = "cameraX" }
+cameraX-lifecycle = { group = "androidx.camera", name = "camera-lifecycle", version.ref = "cameraX" }
+cameraX-view = { group = "androidx.camera", name = "camera-view", version.ref = "cameraX" }
+camera-camera2 = { group = "androidx.camera", name = "camera-camera2", version = "1.2.3" }
+camera-lifecycle = { group = "androidx.camera", name = "camera-lifecycle", version = "1.3.0-beta01" }
+camera-view = { group = "androidx.camera", name = "camera-view", version = "1.3.0-beta01" }
+play-services-mlkit-text-recognition-common = { group = "com.google.android.gms", name = "play-services-mlkit-text-recognition-common", version.ref = "playServicesMlkitTextRecognitionCommon" }
+play-services-mlkit-text-recognition = { group = "com.google.android.gms", name = "play-services-mlkit-text-recognition", version.ref = "playServicesMlkitTextRecognition" }
+[plugins]
+androidApplication = { id = "com.android.application", version.ref = "agp" }
+kotlinAndroid = { id = "org.jetbrains.kotlin.android", version.ref = "kotlin" }
+
+[bundles]
+
