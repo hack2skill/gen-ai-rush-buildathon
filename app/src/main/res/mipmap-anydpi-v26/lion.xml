@@ -1,4 +1,5 @@
-<adaptive-icon xmlns:ns0="http://schemas.android.com/apk/res/android">
-    <background ns0:drawable="@drawable/lion_background" />
-    <foreground ns0:drawable="@mipmap/lion_foreground" />
+<?xml version="1.0" encoding="utf-8"?>
+<adaptive-icon xmlns:android="http://schemas.android.com/apk/res/android">
+    <background android:drawable="@drawable/lion_background"/>
+    <foreground android:drawable="@mipmap/lion_foreground"/>
 </adaptive-icon>

@@ -1,0 +1,1297 @@
+{
+  "name": "frame",
+  "version": 32,
+  "source-key": {
+    "type": "figma",
+    "file": "EA82zIGa1a2Ljv3jfT2o8s",
+    "node": "101:275",
+    "version": "3898572926",
+    "component-id": "7bc8fe9d70ce15c1ab86e5f519b3b2b6178588f7"
+  },
+  "default": "Frame",
+  "documentation": "Basic Screen for Buildathon App",
+  "design": {
+    "atoms": [
+      {
+        "type": "group",
+        "id": "top_level",
+        "root": "true"
+      },
+      {
+        "type": "group",
+        "id": "Background"
+      },
+      {
+        "type": "vector",
+        "id": "Rectangle 1"
+      },
+      {
+        "type": "group",
+        "id": "StatusBar / iPhone 13"
+      },
+      {
+        "type": "group",
+        "id": "HomeIndicator"
+      },
+      {
+        "type": "vector",
+        "id": "Ellipse 1"
+      },
+      {
+        "type": "text",
+        "id": "Peppa Pig"
+      },
+      {
+        "type": "group",
+        "id": "Group 3"
+      },
+      {
+        "type": "group",
+        "id": "Group 6"
+      },
+      {
+        "type": "group",
+        "id": "Group 5"
+      },
+      {
+        "type": "group",
+        "id": "Group 4"
+      },
+      {
+        "type": "group",
+        "id": "Group 7"
+      },
+      {
+        "type": "vector",
+        "id": "Rectangle 5"
+      },
+      {
+        "type": "vector",
+        "id": "Rectangle 6"
+      },
+      {
+        "type": "text",
+        "id": "Enter other interests"
+      },
+      {
+        "type": "text",
+        "id": "Your Child’s name"
+      },
+      {
+        "type": "text",
+        "id": "Trains"
+      },
+      {
+        "type": "text",
+        "id": "Animals"
+      },
+      {
+        "type": "text",
+        "id": "Paw Patrol"
+      },
+      {
+        "type": "text",
+        "id": "Science"
+      },
+      {
+        "type": "text",
+        "id": "Truck"
+      },
+      {
+        "type": "vector",
+        "id": "Rectangle 8"
+      },
+      {
+        "type": "text",
+        "id": "Continue"
+      },
+      {
+        "type": "vector",
+        "id": "Rectangle 9"
+      },
+      {
+        "type": "text",
+        "id": "Back"
+      },
+      {
+        "type": "vector",
+        "id": "Vector 1"
+      },
+      {
+        "type": "vector",
+        "id": "Vector 3"
+      },
+      {
+        "type": "vector",
+        "id": "Vector 2"
+      },
+      {
+        "type": "group",
+        "id": "Notch"
+      },
+      {
+        "type": "group",
+        "id": "Left Side"
+      },
+      {
+        "type": "group",
+        "id": "Right Side"
+      },
+      {
+        "type": "vector",
+        "id": "Notch1"
+      },
+      {
+        "type": "group",
+        "id": "_StatusBar-time"
+      },
+      {
+        "type": "text",
+        "id": "9:41"
+      },
+      {
+        "type": "group",
+        "id": "Battery"
+      },
+      {
+        "type": "vector",
+        "id": "Icon / Mobile Signal"
+      },
+      {
+        "type": "vector",
+        "id": "Outline"
+      },
+      {
+        "type": "vector",
+        "id": "Battery End"
+      },
+      {
+        "type": "vector",
+        "id": "Fill"
+      },
+      {
+        "type": "vector",
+        "id": "Home Indicator"
+      },
+      {
+        "type": "vector",
+        "id": "Ellipse 2"
+      },
+      {
+        "type": "vector",
+        "id": "Ellipse 3"
+      },
+      {
+        "type": "vector",
+        "id": "Ellipse 4"
+      },
+      {
+        "type": "vector",
+        "id": "Ellipse 5"
+      },
+      {
+        "type": "vector",
+        "id": "Ellipse 6"
+      }
+    ],
+    "modes": {
+      "Frame": {
+        "rules": [
+          {
+            "id": "top_level",
+            "border-radius": "50.0",
+            "is-structured": "false",
+            "children": [
+              "Background",
+              "Rectangle 1",
+              "StatusBar / iPhone 13",
+              "HomeIndicator",
+              "Ellipse 1",
+              "Peppa Pig",
+              "Group 3",
+              "Group 6",
+              "Group 5",
+              "Group 4",
+              "Group 7",
+              "Rectangle 5",
+              "Rectangle 6",
+              "Enter other interests",
+              "Your Child’s name",
+              "Trains",
+              "Animals",
+              "Paw Patrol",
+              "Science",
+              "Truck",
+              "Rectangle 8",
+              "Continue",
+              "Rectangle 9",
+              "Back"
+            ],
+            "background-color": {
+              "alpha": "1.0",
+              "hue": "0.0",
+              "saturation": "0.0",
+              "value": "0.9647058823529412"
+            }
+          },
+          {
+            "id": "Background",
+            "alignment": {
+              "horizontal": {
+                "attachment": "start",
+                "offset": "-166.3507080078125"
+              },
+              "vertical": {
+                "attachment": "start",
+                "offset": "-11.0"
+              }
+            },
+            "size-constraints": {
+              "width-constraints": {
+                "sizing-mode": "fixed",
+                "value": "735.3507080078125"
+              },
+              "height-constraints": {
+                "sizing-mode": "fixed",
+                "value": "926.8302001953125"
+              }
+            },
+            "is-structured": "false",
+            "children": [
+              "Vector 1",
+              "Vector 3",
+              "Vector 2"
+            ],
+            "clip-content": "false"
+          },
+          {
+            "id": "Rectangle 1",
+            "size-constraints": {
+              "width-constraints": {
+                "sizing-mode": "fixed",
+                "value": "390.0"
+              },
+              "height-constraints": {
+                "sizing-mode": "fixed",
+                "value": "844.0"
+              }
+            },
+            "vector-content": "rectangle_1.svg"
+          },
+          {
+            "id": "StatusBar / iPhone 13",
+            "size-constraints": {
+              "width-constraints": {
+                "sizing-mode": "fixed",
+                "value": "390.0"
+              },
+              "height-constraints": {
+                "sizing-mode": "fixed",
+                "value": "47.0"
+              }
+            },
+            "is-structured": "false",
+            "children": [
+              "Notch",
+              "Left Side",
+              "Right Side"
+            ]
+          },
+          {
+            "id": "HomeIndicator",
+            "alignment": {
+              "horizontal": {
+                "attachment": "start",
+                "offset": "7.0"
+              },
+              "vertical": {
+                "attachment": "start",
+                "offset": "810.0"
+              }
+            },
+            "size-constraints": {
+              "width-constraints": {
+                "sizing-mode": "fixed",
+                "value": "375.0"
+              },
+              "height-constraints": {
+                "sizing-mode": "fixed",
+                "value": "34.0"
+              }
+            },
+            "is-structured": "false",
+            "children": [
+              "Home Indicator"
+            ],
+            "clip-content": "false"
+          },
+          {
+            "id": "Ellipse 1",
+            "alignment": {
+              "horizontal": {
+                "attachment": "start",
+                "offset": "39.0"
+              },
+              "vertical": {
+                "attachment": "start",
+                "offset": "102.0"
+              }
+            },
+            "size-constraints": {
+              "width-constraints": {
+                "sizing-mode": "fixed",
+                "value": "93.0"
+              },
+              "height-constraints": {
+                "sizing-mode": "fixed",
+                "value": "93.0"
+              }
+            },
+            "vector-content": "ellipse_1.svg"
+          },
+          {
+            "id": "Peppa Pig",
+            "alignment": {
+              "horizontal": {
+                "attachment": "start",
+                "offset": "58.0"
+              },
+              "vertical": {
+                "attachment": "start",
+                "offset": "126.0"
+              }
+            },
+            "font-weight": "600.0",
+            "color": {
+              "alpha": "1.0",
+              "hue": "0.0",
+              "saturation": "0.0",
+              "value": "0.0"
+            },
+            "text-content": "Peppa \nPig",
+            "overflow": "visible",
+            "text-size": "16.0",
+            "line-height": "1.36181640625",
+            "typeface": "Open Sans"
+          },
+          {
+            "id": "Group 3",
+            "alignment": {
+              "horizontal": {
+                "attachment": "start",
+                "offset": "158.0"
+              },
+              "vertical": {
+                "attachment": "start",
+                "offset": "102.0"
+              }
+            },
+            "size-constraints": {
+              "width-constraints": {
+                "sizing-mode": "fixed",
+                "value": "93.0"
+              },
+              "height-constraints": {
+                "sizing-mode": "fixed",
+                "value": "93.0"
+              }
+            },
+            "is-structured": "false",
+            "children": [
+              "Ellipse 2"
+            ],
+            "clip-content": "false"
+          },
+          {
+            "id": "Group 6",
+            "alignment": {
+              "horizontal": {
+                "attachment": "start",
+                "offset": "158.0"
+              },
+              "vertical": {
+                "attachment": "start",
+                "offset": "209.0"
+              }
+            },
+            "size-constraints": {
+              "width-constraints": {
+                "sizing-mode": "fixed",
+                "value": "93.0"
+              },
+              "height-constraints": {
+                "sizing-mode": "fixed",
+                "value": "93.0"
+              }
+            },
+            "is-structured": "false",
+            "children": [
+              "Ellipse 3"
+            ],
+            "clip-content": "false"
+          },
+          {
+            "id": "Group 5",
+            "alignment": {
+              "horizontal": {
+                "attachment": "start",
+                "offset": "39.0"
+              },
+              "vertical": {
+                "attachment": "start",
+                "offset": "213.0"
+              }
+            },
+            "size-constraints": {
+              "width-constraints": {
+                "sizing-mode": "fixed",
+                "value": "93.0"
+              },
+              "height-constraints": {
+                "sizing-mode": "fixed",
+                "value": "93.0"
+              }
+            },
+            "is-structured": "false",
+            "children": [
+              "Ellipse 4"
+            ],
+            "clip-content": "false"
+          },
+          {
+            "id": "Group 4",
+            "alignment": {
+              "horizontal": {
+                "attachment": "start",
+                "offset": "275.0"
+              },
+              "vertical": {
+                "attachment": "start",
+                "offset": "102.0"
+              }
+            },
+            "size-constraints": {
+              "width-constraints": {
+                "sizing-mode": "fixed",
+                "value": "93.0"
+              },
+              "height-constraints": {
+                "sizing-mode": "fixed",
+                "value": "93.0"
+              }
+            },
+            "is-structured": "false",
+            "children": [
+              "Ellipse 5"
+            ],
+            "clip-content": "false"
+          },
+          {
+            "id": "Group 7",
+            "alignment": {
+              "horizontal": {
+                "attachment": "start",
+                "offset": "275.0"
+              },
+              "vertical": {
+                "attachment": "start",
+                "offset": "209.0"
+              }
+            },
+            "size-constraints": {
+              "width-constraints": {
+                "sizing-mode": "fixed",
+                "value": "93.0"
+              },
+              "height-constraints": {
+                "sizing-mode": "fixed",
+                "value": "93.0"
+              }
+            },
+            "is-structured": "false",
+            "children": [
+              "Ellipse 6"
+            ],
+            "clip-content": "false"
+          },
+          {
+            "id": "Rectangle 5",
+            "alignment": {
+              "horizontal": {
+                "attachment": "start",
+                "offset": "30.0"
+              },
+              "vertical": {
+                "attachment": "start",
+                "offset": "331.0"
+              }
+            },
+            "size-constraints": {
+              "width-constraints": {
+                "sizing-mode": "fixed",
+                "value": "325.0"
+              },
+              "height-constraints": {
+                "sizing-mode": "fixed",
+                "value": "39.0"
+              }
+            },
+            "vector-content": "rectangle_5.svg"
+          },
+          {
+            "id": "Rectangle 6",
+            "alignment": {
+              "horizontal": {
+                "attachment": "start",
+                "offset": "30.0"
+              },
+              "vertical": {
+                "attachment": "start",
+                "offset": "393.0"
+              }
+            },
+            "size-constraints": {
+              "width-constraints": {
+                "sizing-mode": "fixed",
+                "value": "325.0"
+              },
+              "height-constraints": {
+                "sizing-mode": "fixed",
+                "value": "39.0"
+              }
+            },
+            "vector-content": "rectangle_6.svg"
+          },
+          {
+            "id": "Enter other interests",
+            "alignment": {
+              "horizontal": {
+                "attachment": "start",
+                "offset": "108.0"
+              },
+              "vertical": {
+                "attachment": "start",
+                "offset": "339.0"
+              }
+            },
+            "color": {
+              "alpha": "1.0",
+              "hue": "0.0",
+              "saturation": "0.0",
+              "value": "0.0"
+            },
+            "text-content": "Enter other interests",
+            "overflow": "visible",
+            "text-size": "20.0",
+            "line-height": "1.14990234375",
+            "typeface": "Arimo"
+          },
+          {
+            "id": "Your Child’s name",
+            "alignment": {
+              "horizontal": {
+                "attachment": "start",
+                "offset": "108.0"
+              },
+              "vertical": {
+                "attachment": "start",
+                "offset": "403.0"
+              }
+            },
+            "color": {
+              "alpha": "1.0",
+              "hue": "0.0",
+              "saturation": "0.0",
+              "value": "0.0"
+            },
+            "text-content": "Your Child’s name",
+            "overflow": "visible",
+            "text-size": "20.0",
+            "line-height": "1.14990234375",
+            "typeface": "Arimo"
+          },
+          {
+            "id": "Trains",
+            "alignment": {
+              "horizontal": {
+                "attachment": "start",
+                "offset": "181.0"
+              },
+              "vertical": {
+                "attachment": "start",
+                "offset": "137.0"
+              }
+            },
+            "font-weight": "600.0",
+            "color": {
+              "alpha": "1.0",
+              "hue": "0.0",
+              "saturation": "0.0",
+              "value": "0.0"
+            },
+            "text-content": "Trains",
+            "overflow": "visible",
+            "text-size": "16.0",
+            "line-height": "1.36181640625",
+            "typeface": "Open Sans"
+          },
+          {
+            "id": "Animals",
+            "alignment": {
+              "horizontal": {
+                "attachment": "start",
+                "offset": "290.0"
+              },
+              "vertical": {
+                "attachment": "start",
+                "offset": "137.0"
+              }
+            },
+            "font-weight": "600.0",
+            "color": {
+              "alpha": "1.0",
+              "hue": "0.0",
+              "saturation": "0.0",
+              "value": "0.0"
+            },
+            "text-content": "Animals",
+            "overflow": "visible",
+            "text-size": "16.0",
+            "line-height": "1.36181640625",
+            "typeface": "Open Sans"
+          },
+          {
+            "id": "Paw Patrol",
+            "alignment": {
+              "horizontal": {
+                "attachment": "start",
+                "offset": "61.0"
+              },
+              "vertical": {
+                "attachment": "start",
+                "offset": "236.0"
+              }
+            },
+            "font-weight": "600.0",
+            "color": {
+              "alpha": "1.0",
+              "hue": "0.0",
+              "saturation": "0.0",
+              "value": "0.0"
+            },
+            "text-content": "Paw \nPatrol",
+            "overflow": "visible",
+            "text-size": "16.0",
+            "line-height": "1.36181640625",
+            "typeface": "Open Sans"
+          },
+          {
+            "id": "Science",
+            "alignment": {
+              "horizontal": {
+                "attachment": "start",
+                "offset": "178.0"
+              },
+              "vertical": {
+                "attachment": "start",
+                "offset": "244.0"
+              }
+            },
+            "font-weight": "600.0",
+            "color": {
+              "alpha": "1.0",
+              "hue": "0.0",
+              "saturation": "0.0",
+              "value": "0.0"
+            },
+            "text-content": "Science",
+            "overflow": "visible",
+            "text-size": "16.0",
+            "line-height": "1.36181640625",
+            "typeface": "Open Sans"
+          },
+          {
+            "id": "Truck",
+            "alignment": {
+              "horizontal": {
+                "attachment": "start",
+                "offset": "301.0"
+              },
+              "vertical": {
+                "attachment": "start",
+                "offset": "244.0"
+              }
+            },
+            "font-weight": "600.0",
+            "color": {
+              "alpha": "1.0",
+              "hue": "0.0",
+              "saturation": "0.0",
+              "value": "0.0"
+            },
+            "text-content": "Truck",
+            "overflow": "visible",
+            "text-size": "16.0",
+            "line-height": "1.36181640625",
+            "typeface": "Open Sans"
+          },
+          {
+            "id": "Rectangle 8",
+            "border-radius": "24.0",
+            "alignment": {
+              "horizontal": {
+                "attachment": "start",
+                "offset": "30.0"
+              },
+              "vertical": {
+                "attachment": "start",
+                "offset": "698.0"
+              }
+            },
+            "size-constraints": {
+              "width-constraints": {
+                "sizing-mode": "fixed",
+                "value": "325.0"
+              },
+              "height-constraints": {
+                "sizing-mode": "fixed",
+                "value": "47.0"
+              }
+            },
+            "vector-content": "rectangle_8.svg"
+          },
+          {
+            "id": "Continue",
+            "alignment": {
+              "horizontal": {
+                "attachment": "start",
+                "offset": "128.0"
+              },
+              "vertical": {
+                "attachment": "start",
+                "offset": "703.0"
+              }
+            },
+            "font-weight": "700.0",
+            "color": {
+              "alpha": "1.0",
+              "hue": "0.0",
+              "saturation": "0.0",
+              "value": "1.0"
+            },
+            "text-content": "Continue",
+            "overflow": "visible",
+            "text-size": "28.0",
+            "line-height": "1.36181640625",
+            "typeface": "Open Sans"
+          },
+          {
+            "id": "Rectangle 9",
+            "border-radius": "24.0",
+            "alignment": {
+              "horizontal": {
+                "attachment": "start",
+                "offset": "30.0"
+              },
+              "vertical": {
+                "attachment": "start",
+                "offset": "763.0"
+              }
+            },
+            "size-constraints": {
+              "width-constraints": {
+                "sizing-mode": "fixed",
+                "value": "325.0"
+              },
+              "height-constraints": {
+                "sizing-mode": "fixed",
+                "value": "47.0"
+              }
+            },
+            "vector-content": "rectangle_9.svg"
+          },
+          {
+            "id": "Back",
+            "alignment": {
+              "horizontal": {
+                "attachment": "start",
+                "offset": "155.0"
+              },
+              "vertical": {
+                "attachment": "start",
+                "offset": "768.0"
+              }
+            },
+            "font-weight": "700.0",
+            "color": {
+              "alpha": "1.0",
+              "hue": "0.0",
+              "saturation": "0.0",
+              "value": "1.0"
+            },
+            "text-content": "Back",
+            "overflow": "visible",
+            "text-size": "28.0",
+            "line-height": "1.36181640625",
+            "typeface": "Open Sans"
+          },
+          {
+            "id": "Vector 1",
+            "size-constraints": {
+              "width-constraints": {
+                "sizing-mode": "fixed",
+                "value": "441.3507080078125"
+              },
+              "height-constraints": {
+                "sizing-mode": "fixed",
+                "value": "670.357177734375"
+              }
+            },
+            "vector-content": "vector_1.svg"
+          },
+          {
+            "id": "Vector 3",
+            "alignment": {
+              "horizontal": {
+                "attachment": "start",
+                "offset": "46.3507080078125"
+              },
+              "vertical": {
+                "attachment": "start",
+                "offset": "491.0"
+              }
+            },
+            "size-constraints": {
+              "width-constraints": {
+                "sizing-mode": "fixed",
+                "value": "501.0984191894531"
+              },
+              "height-constraints": {
+                "sizing-mode": "fixed",
+                "value": "435.8302001953125"
+              }
+            },
+            "vector-content": "vector_3.svg"
+          },
+          {
+            "id": "Vector 2",
+            "alignment": {
+              "horizontal": {
+                "attachment": "start",
+                "offset": "377.3507080078125"
+              },
+              "vertical": {
+                "attachment": "start",
+                "offset": "31.0"
+              }
+            },
+            "size-constraints": {
+              "width-constraints": {
+                "sizing-mode": "fixed",
+                "value": "358.0"
+              },
+              "height-constraints": {
+                "sizing-mode": "fixed",
+                "value": "540.36669921875"
+              }
+            },
+            "vector-content": "vector_2.svg"
+          },
+          {
+            "id": "Notch",
+            "presence": "false",
+            "alignment": {
+              "horizontal": {
+                "attachment": "center",
+                "offset": "0.0"
+              },
+              "vertical": {
+                "attachment": "start",
+                "offset": "-2.0"
+              }
+            },
+            "size-constraints": {
+              "width-constraints": {
+                "sizing-mode": "fixed",
+                "value": "164.0"
+              },
+              "height-constraints": {
+                "sizing-mode": "fixed",
+                "value": "32.0"
+              }
+            },
+            "is-structured": "false",
+            "children": [
+              "Notch1"
+            ],
+            "clip-content": "false"
+          },
+          {
+            "id": "Left Side",
+            "border-radius": "24.0",
+            "alignment": {
+              "horizontal": {
+                "attachment": "start",
+                "offset": "27.0"
+              },
+              "vertical": {
+                "attachment": "start",
+                "offset": "14.0"
+              }
+            },
+            "size-constraints": {
+              "width-constraints": {
+                "sizing-mode": "fixed",
+                "value": "54.0"
+              },
+              "height-constraints": {
+                "sizing-mode": "fixed",
+                "value": "21.0"
+              }
+            },
+            "is-structured": "false",
+            "children": [
+              "_StatusBar-time"
+            ],
+            "clip-content": "false"
+          },
+          {
+            "id": "Right Side",
+            "alignment": {
+              "horizontal": {
+                "attachment": "start",
+                "offset": "286.0"
+              },
+              "vertical": {
+                "attachment": "start",
+                "offset": "19.0"
+              }
+            },
+            "size-constraints": {
+              "width-constraints": {
+                "sizing-mode": "fixed",
+                "value": "77.40118408203125"
+              },
+              "height-constraints": {
+                "sizing-mode": "fixed",
+                "value": "13.0"
+              }
+            },
+            "is-structured": "false",
+            "children": [
+              "Battery",
+              "Icon / Mobile Signal"
+            ],
+            "clip-content": "false"
+          },
+          {
+            "id": "Notch1",
+            "alignment": {
+              "horizontal": {
+                "attachment": "center",
+                "offset": "-0.000003814697265625"
+              },
+              "vertical": {
+                "attachment": "start",
+                "offset": "0.0"
+              }
+            },
+            "size-constraints": {
+              "width-constraints": {
+                "sizing-mode": "fixed",
+                "value": "164.00001525878906"
+              },
+              "height-constraints": {
+                "sizing-mode": "fixed",
+                "value": "32.0"
+              }
+            }
+          },
+          {
+            "id": "_StatusBar-time",
+            "border-radius": "24.0",
+            "alignment": {
+              "horizontal": {
+                "attachment": "center",
+                "offset": "0.0"
+              },
+              "vertical": {
+                "attachment": "start",
+                "offset": "0.0"
+              }
+            },
+            "size-constraints": {
+              "width-constraints": {
+                "sizing-mode": "fixed",
+                "value": "54.0"
+              },
+              "height-constraints": {
+                "sizing-mode": "fixed",
+                "value": "21.0"
+              }
+            },
+            "is-structured": "false",
+            "children": [
+              "9:41"
+            ],
+            "clip-content": "false"
+          },
+          {
+            "id": "9:41",
+            "alignment": {
+              "horizontal": {
+                "attachment": "start",
+                "offset": "0.0"
+              },
+              "vertical": {
+                "attachment": "start",
+                "offset": "1.0"
+              }
+            },
+            "size-constraints": {
+              "width-constraints": {
+                "sizing-mode": "fixed",
+                "value": "54.0"
+              },
+              "height-constraints": {
+                "sizing-mode": "fixed",
+                "value": "20.0"
+              }
+            },
+            "color": {
+              "alpha": "1.0",
+              "hue": "0.0",
+              "saturation": "0.0",
+              "value": "1.0"
+            },
+            "text-content": "9:41",
+            "overflow": "visible",
+            "max-lines": "-1",
+            "text-size": "17.0",
+            "letter-spacing": "-0.40799999237060547",
+            "line-height": "1.2941175842285155",
+            "typeface": "Gloria Hallelujah"
+          },
+          {
+            "id": "Battery",
+            "margin": {
+              "left": "50.0"
+            },
+            "is-structured": "false",
+            "children": [
+              "Outline",
+              "Battery End",
+              "Fill"
+            ],
+            "clip-content": "false"
+          },
+          {
+            "id": "Icon / Mobile Signal",
+            "alignment": {
+              "horizontal": {
+                "attachment": "center",
+                "offset": "-29.700592041015625"
+              },
+              "vertical": {
+                "attachment": "start",
+                "offset": "1.0"
+              }
+            },
+            "size-constraints": {
+              "width-constraints": {
+                "sizing-mode": "fixed",
+                "value": "18.0"
+              },
+              "height-constraints": {
+                "sizing-mode": "fixed",
+                "value": "12.0"
+              }
+            },
+            "vector-content": "icon_mobile_signal.svg"
+          },
+          {
+            "id": "Outline",
+            "border-radius": "4.0",
+            "alignment": {
+              "horizontal": {
+                "attachment": "center",
+                "offset": "-1.200592041015625"
+              },
+              "vertical": {
+                "attachment": "start",
+                "offset": "0.0"
+              }
+            },
+            "size-constraints": {
+              "width-constraints": {
+                "sizing-mode": "fixed",
+                "value": "25.0"
+              },
+              "height-constraints": {
+                "sizing-mode": "fixed",
+                "value": "13.0"
+              }
+            },
+            "vector-content": "outline.svg"
+          },
+          {
+            "id": "Battery End",
+            "alignment": {
+              "horizontal": {
+                "attachment": "center",
+                "offset": "13.0"
+              },
+              "vertical": {
+                "attachment": "start",
+                "offset": "5.0"
+              }
+            },
+            "size-constraints": {
+              "width-constraints": {
+                "sizing-mode": "fixed",
+                "value": "1.40118408203125"
+              },
+              "height-constraints": {
+                "sizing-mode": "fixed",
+                "value": "4.2203369140625"
+              }
+            },
+            "vector-content": "battery_end.svg"
+          },
+          {
+            "id": "Fill",
+            "border-radius": "2.0",
+            "alignment": {
+              "horizontal": {
+                "attachment": "center",
+                "offset": "-1.200592041015625"
+              },
+              "vertical": {
+                "attachment": "start",
+                "offset": "2.0"
+              }
+            },
+            "size-constraints": {
+              "width-constraints": {
+                "sizing-mode": "fixed",
+                "value": "21.0"
+              },
+              "height-constraints": {
+                "sizing-mode": "fixed",
+                "value": "9.0"
+              }
+            },
+            "vector-content": "fill.svg"
+          },
+          {
+            "id": "Home Indicator",
+            "border-radius": "100.0",
+            "alignment": {
+              "horizontal": {
+                "attachment": "center",
+                "offset": "0.5"
+              },
+              "vertical": {
+                "attachment": "end",
+                "offset": "-8.0"
+              }
+            },
+            "size-constraints": {
+              "width-constraints": {
+                "sizing-mode": "fixed",
+                "value": "134.0"
+              },
+              "height-constraints": {
+                "sizing-mode": "fixed",
+                "value": "5.0"
+              }
+            },
+            "vector-content": "home_indicator.svg"
+          },
+          {
+            "id": "Ellipse 2",
+            "size-constraints": {
+              "width-constraints": {
+                "sizing-mode": "fixed",
+                "value": "93.0"
+              },
+              "height-constraints": {
+                "sizing-mode": "fixed",
+                "value": "93.0"
+              }
+            },
+            "vector-content": "ellipse_2.svg"
+          },
+          {
+            "id": "Ellipse 3",
+            "size-constraints": {
+              "width-constraints": {
+                "sizing-mode": "fixed",
+                "value": "93.0"
+              },
+              "height-constraints": {
+                "sizing-mode": "fixed",
+                "value": "93.0"
+              }
+            },
+            "vector-content": "ellipse_3.svg"
+          },
+          {
+            "id": "Ellipse 4",
+            "size-constraints": {
+              "width-constraints": {
+                "sizing-mode": "fixed",
+                "value": "93.0"
+              },
+              "height-constraints": {
+                "sizing-mode": "fixed",
+                "value": "93.0"
+              }
+            },
+            "vector-content": "ellipse_4.svg"
+          },
+          {
+            "id": "Ellipse 5",
+            "size-constraints": {
+              "width-constraints": {
+                "sizing-mode": "fixed",
+                "value": "93.0"
+              },
+              "height-constraints": {
+                "sizing-mode": "fixed",
+                "value": "93.0"
+              }
+            },
+            "vector-content": "ellipse_5.svg"
+          },
+          {
+            "id": "Ellipse 6",
+            "size-constraints": {
+              "width-constraints": {
+                "sizing-mode": "fixed",
+                "value": "93.0"
+              },
+              "height-constraints": {
+                "sizing-mode": "fixed",
+                "value": "93.0"
+              }
+            },
+            "vector-content": "ellipse_6.svg"
+          }
+        ]
+      }
+    }
+  },
+  "previews": [
+    {
+      "design": "Frame",
+      "size": {
+        "width": 390.0,
+        "height": 844.0
+      }
+    }
+  ],
+  "adin-component-search-paths": [],
+  "image-search-paths": [],
+  "vector-search-paths": []
+}
