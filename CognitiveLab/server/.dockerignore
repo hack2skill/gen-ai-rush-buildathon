@@ -1,0 +1,27 @@
+# Ignore files and directories commonly excluded in Node.js projects
+
+# Node.js dependencies
+node_modules
+
+# Build output
+.next
+
+# Development files
+*.log
+.DS_Store
+.env
+
+# Version control files
+.git
+.gitignore
+
+# IDE and editor files
+.vscode
+.idea
+
+# Tests and test coverage reports
+coverage
+__tests__
+
+
+__pycache__
