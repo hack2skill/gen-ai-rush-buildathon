@@ -8,6 +8,7 @@
 
 <img width="348" alt="TuringTribe" src="https://github.com/Rajveermathur/gen-ai-rush-buildathon/assets/63655047/b631e9ab-fd4d-4cd0-889a-c71cbd01febe">
 <br>
+
 ## A Brief of the Prototype: 
 The Prototype is in 2 parts: 
 #### 1. UI Playground/Sandbox : Users to make twitches to the parameters and capture results of AI Driven/Manual Input unit test cases scenarios.
