@@ -304,14 +304,14 @@ let loadInterval;
 // });
 
 const s3 = new AWS.S3({
-  accessKeyId: 'AKIARV5DYSHCSW7TYOEZ',
-  secretAccessKey: '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',
+  accessKeyId: '',
+  secretAccessKey: '',
 });
 
 const lambda = new AWS.Lambda({
-  accessKeyId: 'AKIARV5DYSHCSW7TYOEZ',
-  secretAccessKey: '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',
-  region: 'us-east-1'
+  accessKeyId: '',
+  secretAccessKey: '',
+  region: ''
 });
 
 function sleep(ms) {
