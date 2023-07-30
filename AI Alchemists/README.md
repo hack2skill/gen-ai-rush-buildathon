@@ -46,6 +46,8 @@
 ## Step-by-Step Code Execution Instructions:
   - Clone this repository ```git clone https://github.com/jaishana25/gen-ai-rush-buildathon.git```
   - ```cd '.\gen-ai-rush-buildathon\AI Alchemists\'```
+
+  - In the FlaskDeployedApp folder in the backend folder, download the model from ```https://drive.google.com/file/d/1Pzcr3PVroZgYs2kp9mw9dXx36sfsnx3U/view?usp=sharing``` and place it.
   - Start up the backend server with the following command: 
   ```
   cd backend
