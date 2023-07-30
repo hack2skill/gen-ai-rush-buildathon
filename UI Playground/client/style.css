@@ -1,0 +1,59 @@
+/* CSS UNIT TESTING */
+
+/* body {
+  background-color: black;
+color: white;
+} */
+
+.heading{
+  padding-right: 70px ;
+}
+.color-strip {
+  background-color: #088F8F;
+  height: 30px;
+  margin-left: 21.4%;
+  width: 67.5%;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  padding-right: 10px;
+  padding-bottom: 3px;
+}
+
+/* .copy-button, .save  {
+  background-color: #7393B3;
+  border: 0.1px solid black;
+  color: black;
+  margin-top: 3px;
+  padding: 3px 14px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 14px;
+  cursor: pointer;
+  border-radius: 25px;
+  color: white;
+
+} */
+
+.save {
+margin-left: 1%;
+}
+
+
+
+  .card {
+    /* width: 170px; */
+    /* height: 60px; */
+    background-color: #f1f1f1;
+    border-radius: 8px;
+    /* padding: 16px; */
+    transition: transform 0.3s;
+    opacity: 0;
+    pointer-events: none;
+  }
+
+.card.open {
+  opacity: 1;
+  pointer-events: initial;
+}

@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/svg+xml" href="assets/gpt.ico" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>TuringTribe.ai </title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css"
+    integrity="sha512-1sCRPdkRXhBV2PBLUdRb4tMg1w2YPf37qatUFeS7zlBy7jJI8Lf4VHwWfZZfpXtYSLy85pkm9GaYVYMfw5BC1A=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+</head>
+
+<body>
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <div class="container">
+      <a class="navbar-brand" href="#"><img src="assets/logo.png" alt="Company Icon Image"
+          style="height: 55px;"></a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <span class="navbar-text d-flex justify-content-center align-items-center">
+        <h3></h3>
+      </span>
+      <!-- <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <form class="d-flex ms-auto">
+          <button class="btn btn-outline-success" href="nexttestdata.html" type="submit" style="float:right ;">Test Data
+            Generation</button>
+        </form>
+      </div> -->
+    </div>
+  </nav>
+
+  <!-- <img src="assets/brillioimage.png" alt="Company Icon Image"
+    style="position: absolute ; height: 45px ; margin-left: 25px; margin-top: 15px ;">
+  <a href="nexttestdata.html" style="position: absolute; height: 45px ; margin-left: 87% ; margin-top: 25px ;">Test Data Generation</a> -->
+
+
+  <!-- <div class="" style="text-align: center; display: flex; justify-content: center; align-items: center;">
+    <h2 style="letter-spacing: 3px ;">BTaaS.ai</h2>
+  </div> -->
+
+  <!-- Credential for Github -->
+  <hr style="height: 5px; background-color: grey;">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-auto">
+    <h3>Credentials : </h3>
+  </div>
+    <div id="container" class="col">
+      <button id="openButton" type="button" class="btn btn-primary btn-lg">Github Setup</button>
+      <div id="card" class="card" style="width: 40rem; height: 5rem;">
+        <div class="card-body input-group">
+          <span class="input-group-text">GitPat Token & Repo Owner</span>
+          <input type="password" id="gitpat" placeholder="Enter GitPAT" class="form-control"
+            value="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">
+          <input type="text" id="repoowner" placeholder="Enter Repo Onwer" value="KGSSV" class="form-control">
+          <button id="saveButton" class="btn btn-outline-success">Save</button>
+          <button id="resetButton" class="btn btn-outline-danger">Reset</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+  <hr style="height: 5px; background-color: grey;">
+  
+  <!-- <div class="container">
+    <h3>Credentials : </h3>
+  </div>
+
+  <div id="container" class="container" style="position: absolute; margin-left: 15% ; margin-top: -2.9% ;">
+    <button id="openButton" style="padding: 5px 20px;">Setup</button>
+    <div id="card" class="card" style="padding: 20px ;">
+      <input type="password" id="gitpat" placeholder="Enter GitPAT" style="margin-bottom: 4px ;"
+        value="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">
+      <input type="text" id="repoowner" placeholder="Enter Repo Onwer" style="margin-bottom: 4px ;"
+        value="brillio-Oneai">
+      <button id="saveButton">Save</button>
+      <button id="resetButton">Reset</button>
+    </div>
+  </div> -->
+
+  <!-- Setting Parameters for Github Repo  -->
+  <div class="container">
+    <div class="row">
+      <div class="col">
+  <b><label for="reposelect">Select Repository :</label></b></div>
+  <div class="col">
+  <select name="reposelectop" id="reposelectop" class="form-select">
+    <option value="select">select</option>
+  </select></div>
+</div>
+<br/>
+
+  <div class="row">
+    <div class="col">
+  <b><label for="branchselect">Select Branch :</label></b></div>
+  <div class="col">
+  <select name="branchselect" id="branchselect" class="form-select">
+    <option value="select">select</option>
+  </select>
+</div></div>
+  <br>
+  
+  <div class="row">
+    <div class="col">
+  <b><label for="reposelect">Select Module :</label></b></div>
+  <div class="col">
+  <select name="moduleselect" id="moduleselect" class="form-select">
+    <option value="select">select</option>
+  </select></div>
+</div>
+<br>
+
+<h4>Code Preview :</h4>
+<textarea id="module_text_code" name="module_text_code"
+style="position: relative ; margin-left: 24% ; margin-top: -37px ;" name="code_p" id="code_p" cols="112" rows="10"
+disabled></textarea>
+<br><br/>
+<div class="d-flex justify-content-center" >
+<button id="next_pass" class="btn btn-primary btn-lg">Next</button></div>
+</div>
+
+
+
+  <!-- <b><label style="margin-left: 10.5% ; " for="reposelect">Select Repository :</label></b>
+  <select style="margin-left: 2.5% ; padding: 10px 30px ;" name="reposelectop" id="reposelectop">
+    <option value="select" style="font-size: 1em ;">select</option>
+  </select> -->
+
+
+  <hr style="height: 5px; background-color: grey;">
+  
+  <!-- Last Segment -->
+  <form action="">
+    <div class="container">
+      <table>
+        <tr>
+          <td class="heading">
+            <h3>Enter your Code Here : </h3>
+          </td>
+          <td>
+            <textarea name="code" id="code" style="height: 200px ; width: 850px ;" placeholder="Enter Your Code here"
+              disabled></textarea>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            
+            <h3>Advance Testing Options :</h3>
+          </td>
+          <td>
+            <div style="display:flex ; gap: 20px ;" class="form-check">
+              <div>
+                <input type="radio" class="form-check-input" name="content" value="AI" id="content1-radio">
+                <label for="content1-radio" class="form-check-label">AI-Driven Creation</label>
+              </div>
+              <!-- <div>
+                <input type="radio" name="content" value="sheets" id="content2-radio">
+                <label for="content2-radio">Google Sheets</label>
+              </div> -->
+              <div style="padding-left: 20px;">
+                <input type="radio" class="form-check-input" name="content" value="manual" id="content3-radio">
+                <label for="content3-radio" class="form-check-label">Direct Manual Input</label>
+              </div>
+            </div>
+          </td>
+        </tr>
+        <tr>
+          <td class="heading">
+            <h3>Test Case Scenarios : </h3>
+            
+          </td>
+          <td>
+            <!-- <div class="color-strip" style="width: 98.7% ; margin-left: 0% ; margin-bottom: 1px;"> -->
+              <!-- <button id="copybtn" class="copy-button">Copy</button> -->
+              <!-- <button type="button" id="savetosheet" class="save">Send to Sheets</button> -->
+            <!-- </div> -->
+            <textarea name="scenario" id="scenario" style="height: 100px ; width: 850px ;"
+              placeholder="Enter Your Scenarios here"></textarea>
+          </td>
+        </tr>
+      </table>
+    </div>
+    <div class="d-flex justify-content-center" >
+    <button type="submit" class="btn btn-primary btn-lg">Submit-GPT</button>
+  </div>
+  </form>
+ <br>
+  
+  <div class="container">
+    <div class="d-flex justify-content-end">
+      <button id="copybtn" class="copy-button btn btn-primary">Copy</button>
+      <button id="savebtn" class="save btn btn-primary">Save</button>
+    </div>
+    <!-- <div id="savebtn" class="color-strip">
+      <button  class="save">Save</button>
+    </div> -->
+    <form action="">
+      <table>
+        <tr>
+          <td class="heading">
+            <h3>Results:</h3>
+          </td>
+          <td style="padding-left: 95px;">
+            <textarea name="result" id="result" style="height: 300px ; width: 850px ;"
+              placeholder="Output will be displayed here"></textarea>
+          </td>
+        </tr>
+      </table>
+    </form>
+    <div class="d-flex justify-content-center">
+    <button type="button" id="reposendfinal" class="btn btn-primary btn-lg">Send To Repo</button></div>
+  </div>
+  <br><br>
+
+  <script type="module" src="script.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+    crossorigin="anonymous"></script>
+  <!-- <script type="module" src="scriptdata.js"></script> -->
+  <script src="https://sdk.amazonaws.com/js/aws-sdk-2.988.0.min.js"></script>
+</body>
+
+
+</html>
