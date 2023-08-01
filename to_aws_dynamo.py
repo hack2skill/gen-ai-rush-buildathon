@@ -1,8 +1,8 @@
 import pandas as pd
 import boto3
 
-aws_access_key_id = 'AKIAVTINSJFICHEJXH6N'
-aws_secret_key = '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'
+aws_access_key_id = 
+aws_secret_key = 
 
 
 input_csv_file = "total_records_by_country.csv"
