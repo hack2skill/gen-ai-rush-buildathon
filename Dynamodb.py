@@ -1,6 +1,6 @@
 
-aws_access_key_id = 'AKIAVTINSJFII2GZXYJB'
-aws_secret_key = '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'
+aws_access_key_id = 
+aws_secret_key = 
 
 session = boto3.Session(
     aws_access_key_id=aws_access_key_id,
