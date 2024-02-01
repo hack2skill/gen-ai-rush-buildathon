@@ -45,4 +45,7 @@ User Interface => User Uploads the X-Rays => User gets seventy grading => User i
    There are many people who suffer with this and with this we can help people out also with medical we need to consider lots of aspects and overall view
 
 ## Link to download the model:
-   https://drive.google.com/file/d/1t6XblfNhaDe4RskXoY_Apha6csvVReno/view?usp=sharing 
+   https://drive.google.com/file/d/1t6XblfNhaDe4RskXoY_Apha6csvVReno/view?usp=sharing
+
+## Demo Video of the System
+   https://drive.google.com/file/d/1sm1Q5RLMmI3C8pt_nhR8-xKNEDvmaEba/view?usp=drive_link
